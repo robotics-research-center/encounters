@@ -1,3 +1,8 @@
+THIS IS WORKING MULTISESSION INCREMENTAL CODE.
+
+
+
+
 This program executes Libviso, DLoop and g2o in parallel threads for trajectory estimation and optimization using stereo vision.
 
 Procedure -
