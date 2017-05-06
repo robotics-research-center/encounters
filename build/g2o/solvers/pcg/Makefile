@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,28 +78,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -110,6 +88,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,14 +113,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/pcg/CMakeFiles/progress.marks
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/pcg/CMakeFiles/progress.marks
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/clean
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/rule:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/rule
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/rule
 .PHONY : g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/rule
 
 # Convenience name for target.
@@ -166,7 +155,7 @@ solver_pcg: g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/rule
 
 # fast build rule for target.
 solver_pcg/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build
 .PHONY : solver_pcg/fast
 
 solver_pcg.o: solver_pcg.cpp.o
@@ -175,7 +164,7 @@ solver_pcg.o: solver_pcg.cpp.o
 
 # target to build an object file
 solver_pcg.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.o
 .PHONY : solver_pcg.cpp.o
 
 solver_pcg.i: solver_pcg.cpp.i
@@ -184,7 +173,7 @@ solver_pcg.i: solver_pcg.cpp.i
 
 # target to preprocess a source file
 solver_pcg.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.i
 .PHONY : solver_pcg.cpp.i
 
 solver_pcg.s: solver_pcg.cpp.s
@@ -193,7 +182,7 @@ solver_pcg.s: solver_pcg.cpp.s
 
 # target to generate assembly for a file
 solver_pcg.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/build.make g2o/solvers/pcg/CMakeFiles/solver_pcg.dir/solver_pcg.cpp.s
 .PHONY : solver_pcg.cpp.s
 
 # Help Target
@@ -204,10 +193,9 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... solver_pcg"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... solver_pcg"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... solver_pcg.o"
 	@echo "... solver_pcg.i"
@@ -223,6 +211,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

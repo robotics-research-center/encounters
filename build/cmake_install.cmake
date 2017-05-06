@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,13 +41,13 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/include/g2o" TYPE FILE FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/config.h")
+file(INSTALL DESTINATION "/usr/local/include/g2o" TYPE FILE FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/config.h")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gunshi/Downloads/MultiRobot/slam/cair/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gunshi/Downloads/MultiRobot/3dmerge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

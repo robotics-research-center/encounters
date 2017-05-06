@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/data/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam2d/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sim3/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/icp/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sclam2d/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam2d_addons/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d_addons/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/data/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam2d/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sim3/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/icp/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sclam2d/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam2d_addons/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d_addons/cmake_install.cmake")
 
 endif()
 

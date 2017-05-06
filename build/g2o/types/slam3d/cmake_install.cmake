@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,7 +41,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_types_slam3d.a")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/lib/libg2o_types_slam3d.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,27 +54,27 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local/include/g2o/types/slam3d" TYPE FILE FILES
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/dquat2mat.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_pointxyz.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_prior.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_depth.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/types_slam3d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_disparity.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_mappings.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_offset.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_pointxyz.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/se3quat.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_lotsofxyz.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_se3.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/se3_ops.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_gradients.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_camera.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_stereo_camera.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/g2o_types_slam3d_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_se3_offset.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/se3_ops.hpp"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/dquat2mat.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_pointxyz.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_prior.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_depth.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/types_slam3d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_disparity.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_mappings.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_offset.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_pointxyz.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/se3quat.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_lotsofxyz.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_se3.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/se3_ops.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_gradients.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_camera.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_stereo_camera.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/g2o_types_slam3d_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_se3_offset.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/se3_ops.hpp"
     )
 endif()
 

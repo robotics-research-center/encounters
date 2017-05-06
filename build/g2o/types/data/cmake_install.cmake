@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,7 +41,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_types_data.a")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/lib/libg2o_types_data.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,15 +54,15 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local/include/g2o/types/data" TYPE FILE FILES
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/raw_laser.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/robot_data.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/g2o_types_data_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/types_data.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/vertex_ellipse.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/robot_laser.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/vertex_tag.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/data_queue.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/data/laser_parameters.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/raw_laser.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/robot_data.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/g2o_types_data_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/types_data.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/vertex_ellipse.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/robot_laser.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/vertex_tag.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/data_queue.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/data/laser_parameters.h"
     )
 endif()
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -124,14 +113,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d_addons/CMakeFiles/progress.marks
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d_addons/CMakeFiles/progress.marks
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/clean
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/rule:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/rule
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/rule
 .PHONY : g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/rule
 
 # Convenience name for target.
@@ -166,12 +155,12 @@ types_slam3d_addons: g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/
 
 # fast build rule for target.
 types_slam3d_addons/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build
 .PHONY : types_slam3d_addons/fast
 
 # Convenience name for target.
 g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/rule:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/rule
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/rule
 .PHONY : g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/rule
 
 # Convenience name for target.
@@ -181,7 +170,7 @@ test_line3d: g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/rule
 
 # fast build rule for target.
 test_line3d/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build
 .PHONY : test_line3d/fast
 
 edge_line3d.o: edge_line3d.cpp.o
@@ -190,7 +179,7 @@ edge_line3d.o: edge_line3d.cpp.o
 
 # target to build an object file
 edge_line3d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.o
 .PHONY : edge_line3d.cpp.o
 
 edge_line3d.i: edge_line3d.cpp.i
@@ -199,7 +188,7 @@ edge_line3d.i: edge_line3d.cpp.i
 
 # target to preprocess a source file
 edge_line3d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.i
 .PHONY : edge_line3d.cpp.i
 
 edge_line3d.s: edge_line3d.cpp.s
@@ -208,7 +197,7 @@ edge_line3d.s: edge_line3d.cpp.s
 
 # target to generate assembly for a file
 edge_line3d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_line3d.cpp.s
 .PHONY : edge_line3d.cpp.s
 
 edge_plane.o: edge_plane.cpp.o
@@ -217,7 +206,7 @@ edge_plane.o: edge_plane.cpp.o
 
 # target to build an object file
 edge_plane.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.o
 .PHONY : edge_plane.cpp.o
 
 edge_plane.i: edge_plane.cpp.i
@@ -226,7 +215,7 @@ edge_plane.i: edge_plane.cpp.i
 
 # target to preprocess a source file
 edge_plane.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.i
 .PHONY : edge_plane.cpp.i
 
 edge_plane.s: edge_plane.cpp.s
@@ -235,7 +224,7 @@ edge_plane.s: edge_plane.cpp.s
 
 # target to generate assembly for a file
 edge_plane.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_plane.cpp.s
 .PHONY : edge_plane.cpp.s
 
 edge_se3_calib.o: edge_se3_calib.cpp.o
@@ -244,7 +233,7 @@ edge_se3_calib.o: edge_se3_calib.cpp.o
 
 # target to build an object file
 edge_se3_calib.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.o
 .PHONY : edge_se3_calib.cpp.o
 
 edge_se3_calib.i: edge_se3_calib.cpp.i
@@ -253,7 +242,7 @@ edge_se3_calib.i: edge_se3_calib.cpp.i
 
 # target to preprocess a source file
 edge_se3_calib.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.i
 .PHONY : edge_se3_calib.cpp.i
 
 edge_se3_calib.s: edge_se3_calib.cpp.s
@@ -262,7 +251,7 @@ edge_se3_calib.s: edge_se3_calib.cpp.s
 
 # target to generate assembly for a file
 edge_se3_calib.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_calib.cpp.s
 .PHONY : edge_se3_calib.cpp.s
 
 edge_se3_euler.o: edge_se3_euler.cpp.o
@@ -271,7 +260,7 @@ edge_se3_euler.o: edge_se3_euler.cpp.o
 
 # target to build an object file
 edge_se3_euler.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.o
 .PHONY : edge_se3_euler.cpp.o
 
 edge_se3_euler.i: edge_se3_euler.cpp.i
@@ -280,7 +269,7 @@ edge_se3_euler.i: edge_se3_euler.cpp.i
 
 # target to preprocess a source file
 edge_se3_euler.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.i
 .PHONY : edge_se3_euler.cpp.i
 
 edge_se3_euler.s: edge_se3_euler.cpp.s
@@ -289,7 +278,7 @@ edge_se3_euler.s: edge_se3_euler.cpp.s
 
 # target to generate assembly for a file
 edge_se3_euler.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_euler.cpp.s
 .PHONY : edge_se3_euler.cpp.s
 
 edge_se3_line.o: edge_se3_line.cpp.o
@@ -298,7 +287,7 @@ edge_se3_line.o: edge_se3_line.cpp.o
 
 # target to build an object file
 edge_se3_line.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.o
 .PHONY : edge_se3_line.cpp.o
 
 edge_se3_line.i: edge_se3_line.cpp.i
@@ -307,7 +296,7 @@ edge_se3_line.i: edge_se3_line.cpp.i
 
 # target to preprocess a source file
 edge_se3_line.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.i
 .PHONY : edge_se3_line.cpp.i
 
 edge_se3_line.s: edge_se3_line.cpp.s
@@ -316,7 +305,7 @@ edge_se3_line.s: edge_se3_line.cpp.s
 
 # target to generate assembly for a file
 edge_se3_line.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_line.cpp.s
 .PHONY : edge_se3_line.cpp.s
 
 edge_se3_plane_calib.o: edge_se3_plane_calib.cpp.o
@@ -325,7 +314,7 @@ edge_se3_plane_calib.o: edge_se3_plane_calib.cpp.o
 
 # target to build an object file
 edge_se3_plane_calib.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.o
 .PHONY : edge_se3_plane_calib.cpp.o
 
 edge_se3_plane_calib.i: edge_se3_plane_calib.cpp.i
@@ -334,7 +323,7 @@ edge_se3_plane_calib.i: edge_se3_plane_calib.cpp.i
 
 # target to preprocess a source file
 edge_se3_plane_calib.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.i
 .PHONY : edge_se3_plane_calib.cpp.i
 
 edge_se3_plane_calib.s: edge_se3_plane_calib.cpp.s
@@ -343,7 +332,7 @@ edge_se3_plane_calib.s: edge_se3_plane_calib.cpp.s
 
 # target to generate assembly for a file
 edge_se3_plane_calib.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/edge_se3_plane_calib.cpp.s
 .PHONY : edge_se3_plane_calib.cpp.s
 
 line3d.o: line3d.cpp.o
@@ -352,7 +341,7 @@ line3d.o: line3d.cpp.o
 
 # target to build an object file
 line3d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.o
 .PHONY : line3d.cpp.o
 
 line3d.i: line3d.cpp.i
@@ -361,7 +350,7 @@ line3d.i: line3d.cpp.i
 
 # target to preprocess a source file
 line3d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.i
 .PHONY : line3d.cpp.i
 
 line3d.s: line3d.cpp.s
@@ -370,7 +359,7 @@ line3d.s: line3d.cpp.s
 
 # target to generate assembly for a file
 line3d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/line3d.cpp.s
 .PHONY : line3d.cpp.s
 
 line3d_test.o: line3d_test.cpp.o
@@ -379,7 +368,7 @@ line3d_test.o: line3d_test.cpp.o
 
 # target to build an object file
 line3d_test.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.o
 .PHONY : line3d_test.cpp.o
 
 line3d_test.i: line3d_test.cpp.i
@@ -388,7 +377,7 @@ line3d_test.i: line3d_test.cpp.i
 
 # target to preprocess a source file
 line3d_test.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.i
 .PHONY : line3d_test.cpp.i
 
 line3d_test.s: line3d_test.cpp.s
@@ -397,7 +386,7 @@ line3d_test.s: line3d_test.cpp.s
 
 # target to generate assembly for a file
 line3d_test.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/build.make g2o/types/slam3d_addons/CMakeFiles/test_line3d.dir/line3d_test.cpp.s
 .PHONY : line3d_test.cpp.s
 
 types_slam3d_addons.o: types_slam3d_addons.cpp.o
@@ -406,7 +395,7 @@ types_slam3d_addons.o: types_slam3d_addons.cpp.o
 
 # target to build an object file
 types_slam3d_addons.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.o
 .PHONY : types_slam3d_addons.cpp.o
 
 types_slam3d_addons.i: types_slam3d_addons.cpp.i
@@ -415,7 +404,7 @@ types_slam3d_addons.i: types_slam3d_addons.cpp.i
 
 # target to preprocess a source file
 types_slam3d_addons.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.i
 .PHONY : types_slam3d_addons.cpp.i
 
 types_slam3d_addons.s: types_slam3d_addons.cpp.s
@@ -424,7 +413,7 @@ types_slam3d_addons.s: types_slam3d_addons.cpp.s
 
 # target to generate assembly for a file
 types_slam3d_addons.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/types_slam3d_addons.cpp.s
 .PHONY : types_slam3d_addons.cpp.s
 
 vertex_line3d.o: vertex_line3d.cpp.o
@@ -433,7 +422,7 @@ vertex_line3d.o: vertex_line3d.cpp.o
 
 # target to build an object file
 vertex_line3d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.o
 .PHONY : vertex_line3d.cpp.o
 
 vertex_line3d.i: vertex_line3d.cpp.i
@@ -442,7 +431,7 @@ vertex_line3d.i: vertex_line3d.cpp.i
 
 # target to preprocess a source file
 vertex_line3d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.i
 .PHONY : vertex_line3d.cpp.i
 
 vertex_line3d.s: vertex_line3d.cpp.s
@@ -451,7 +440,7 @@ vertex_line3d.s: vertex_line3d.cpp.s
 
 # target to generate assembly for a file
 vertex_line3d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_line3d.cpp.s
 .PHONY : vertex_line3d.cpp.s
 
 vertex_plane.o: vertex_plane.cpp.o
@@ -460,7 +449,7 @@ vertex_plane.o: vertex_plane.cpp.o
 
 # target to build an object file
 vertex_plane.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.o
 .PHONY : vertex_plane.cpp.o
 
 vertex_plane.i: vertex_plane.cpp.i
@@ -469,7 +458,7 @@ vertex_plane.i: vertex_plane.cpp.i
 
 # target to preprocess a source file
 vertex_plane.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.i
 .PHONY : vertex_plane.cpp.i
 
 vertex_plane.s: vertex_plane.cpp.s
@@ -478,7 +467,7 @@ vertex_plane.s: vertex_plane.cpp.s
 
 # target to generate assembly for a file
 vertex_plane.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_plane.cpp.s
 .PHONY : vertex_plane.cpp.s
 
 vertex_se3_euler.o: vertex_se3_euler.cpp.o
@@ -487,7 +476,7 @@ vertex_se3_euler.o: vertex_se3_euler.cpp.o
 
 # target to build an object file
 vertex_se3_euler.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.o
 .PHONY : vertex_se3_euler.cpp.o
 
 vertex_se3_euler.i: vertex_se3_euler.cpp.i
@@ -496,7 +485,7 @@ vertex_se3_euler.i: vertex_se3_euler.cpp.i
 
 # target to preprocess a source file
 vertex_se3_euler.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.i
 .PHONY : vertex_se3_euler.cpp.i
 
 vertex_se3_euler.s: vertex_se3_euler.cpp.s
@@ -505,7 +494,7 @@ vertex_se3_euler.s: vertex_se3_euler.cpp.s
 
 # target to generate assembly for a file
 vertex_se3_euler.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/build.make g2o/types/slam3d_addons/CMakeFiles/types_slam3d_addons.dir/vertex_se3_euler.cpp.s
 .PHONY : vertex_se3_euler.cpp.s
 
 # Help Target
@@ -520,7 +509,6 @@ help:
 	@echo "... types_slam3d_addons"
 	@echo "... edit_cache"
 	@echo "... test_line3d"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edge_line3d.o"
 	@echo "... edge_line3d.i"
@@ -569,6 +557,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

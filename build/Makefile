@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -111,22 +111,11 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -479,6 +468,11 @@ csparse_extension/fast:
 	$(MAKE) -f g2o/solvers/csparse/CMakeFiles/csparse_extension.dir/build.make g2o/solvers/csparse/CMakeFiles/csparse_extension.dir/build
 .PHONY : csparse_extension/fast
 
+# Manual pre-install relink rule for target.
+csparse_extension/preinstall:
+	$(MAKE) -f g2o/solvers/csparse/CMakeFiles/csparse_extension.dir/build.make g2o/solvers/csparse/CMakeFiles/csparse_extension.dir/preinstall
+.PHONY : csparse_extension/preinstall
+
 #=============================================================================
 # Target rules for targets named solver_csparse
 
@@ -772,7 +766,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... DLib"
 	@echo "... Dependencies"
 	@echo "... DBoW2"

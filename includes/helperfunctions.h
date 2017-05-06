@@ -13,6 +13,8 @@
 //gtsam includes
 #include <gtsam/geometry/Pose2.h>
 #include <gtsam/geometry/Point2.h>
+#include <gtsam/geometry/Point3.h>
+#include <gtsam/geometry/Pose3.h>
 #include <gtsam/inference/Symbol.h>
 #include <gtsam/slam/PriorFactor.h>
 #include <gtsam/slam/BetweenFactor.h>
@@ -26,8 +28,16 @@
 #include <gtsam/nonlinear/ISAM2.h>
 #include <gtsam/base/timing.h>
 
+
 extern comm mythread_comm;
 extern writer mywriter;
+extern std::vector<Matrix> Tr_global;
+extern gtsam::Values initial;
+//extern std::ofstream unopt; //needed?
+extern gtsam::Values initialunopt;
+extern gtsam::Pose3 refPose; 
+extern gtsam::Pose3 currentPose; 
+extern int latestkey;
 
 #ifndef _HELPER_FINCTIONS_h
 #define _HELPER_FINCTIONS_h
@@ -41,7 +51,7 @@ extern writer mywriter;
 int listdir(char *dir);
 
 // To find Visual Odometry using libviso2
-void my_libviso2(std::vector<Matrix> &myvec1, std::vector<Matrix> &myvec2, std::string dir, int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg);
+void my_libviso2(std::string dir, int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg);
 
 // Class to hold relative poses
 

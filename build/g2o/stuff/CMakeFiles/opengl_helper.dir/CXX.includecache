@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/opengl_primitives.cpp
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/opengl_primitives.cpp
 opengl_primitives.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/opengl_primitives.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/opengl_primitives.h
 cstdlib
 -
 cmath
@@ -18,15 +18,15 @@ OpenGL/glu.h
 GL/glu.h
 -
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/opengl_primitives.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/opengl_primitives.h
 opengl_wrapper.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/opengl_wrapper.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/opengl_wrapper.h
 g2o/config.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/g2o/config.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/g2o/config.h
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/opengl_wrapper.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/opengl_wrapper.h
 g2o/config.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/g2o/config.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/g2o/config.h
 windows.h
 -
 OpenGL/gl.h

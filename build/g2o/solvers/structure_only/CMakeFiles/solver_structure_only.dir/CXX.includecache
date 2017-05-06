@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/structure_only.cpp
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/structure_only.cpp
 structure_only_solver.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/structure_only_solver.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/structure_only_solver.h
 g2o/core/optimization_algorithm_factory.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/optimization_algorithm_factory.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/optimization_algorithm_factory.h
 g2o/core/optimization_algorithm.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/optimization_algorithm.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/optimization_algorithm.h
 g2o/stuff/macros.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/stuff/macros.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/stuff/macros.h
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/structure_only_solver.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/structure_only_solver.h
 g2o/core/base_vertex.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/base_vertex.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/base_vertex.h
 g2o/core/base_binary_edge.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/base_binary_edge.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/base_binary_edge.h
 g2o/core/optimization_algorithm.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/optimization_algorithm.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/optimization_algorithm.h
 g2o/core/sparse_optimizer.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/structure_only/g2o/core/sparse_optimizer.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/structure_only/g2o/core/sparse_optimizer.h
 
 /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Cholesky
 Core

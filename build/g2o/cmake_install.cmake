@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/core/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/core/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/cmake_install.cmake")
 
 endif()
 

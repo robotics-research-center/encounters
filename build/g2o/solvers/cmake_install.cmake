@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/pcg/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/dense/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/structure_only/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/cholmod/cmake_install.cmake")
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/eigen/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/pcg/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/dense/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/structure_only/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/cholmod/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/eigen/cmake_install.cmake")
 
 endif()
 

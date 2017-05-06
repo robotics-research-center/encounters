@@ -34,6 +34,7 @@ using namespace cv;
 
 pthread_mutex_t myMutex1;
 bool to_consider = false;
+//std::ofstream transforms;
 
 struct for_libviso_relative_thread
 {
@@ -475,6 +476,7 @@ TDetector demoDetector<TVocabulary, TDetector, TDescriptor>::runPreSession
   //cout << "dir: " << name1 <<endl;
   myviso.dir = m_imagedir;
   loopsize=filenames.size();
+  mythread_comm.Nfirstloop=loopsize;
   for(unsigned int i = 0; i < filenames.size(); ++i)
   {
     
@@ -552,7 +554,7 @@ TDetector demoDetector<TVocabulary, TDetector, TDescriptor>::runPreSession
       }
     }
     
-    if(i==filenames.size()-8){  ///see
+    if(i==filenames.size()-15){  ///see
         pthread_mutex_lock(&myMutex1);
         mythread_comm.can_start_viso = true;
         pthread_mutex_unlock(&myMutex1);
@@ -589,6 +591,7 @@ void demoDetector<TVocabulary, TDetector, TDescriptor>::runSession
   namedWindow( "Display window", WINDOW_AUTOSIZE );
   cout << "LoopDetector" << endl;
   
+  //transforms.open("transforms.txt");
   // Set loop detector parameters
   //typename TDetector::Parameters params(m_height, m_width);
 
@@ -632,18 +635,16 @@ void demoDetector<TVocabulary, TDetector, TDescriptor>::runSession
   DUtils::Profiler profiler;
   
   int count = 0, inliercount=0;
-  
-  //namedWindow( "Image1", WINDOW_AUTOSIZE );
   for_libviso_relative_thread myviso;
-  //cout << "dir: " << name1 <<endl;
   myviso.dir = m_imagedir;
 
   string ss,comment,final;
   comment = "\n#loop closure - \n";
   mythread_comm.loop_write_done = false;
-
+  int secondloopsize=filenames.size();
+  mythread_comm.Nsecondloop=secondloopsize;
   // go
-  for(unsigned int i = 0; i < filenames.size(); ++i)
+  for(unsigned int i = 0; i < secondloopsize; ++i)
   {
     pthread_mutex_lock(&myMutex1);
     mythread_comm.loop_wait = true;
@@ -692,21 +693,39 @@ void demoDetector<TVocabulary, TDetector, TDescriptor>::runSession
       pthread_create(&thread1, &attr1, libviso_relative_thread, (void *)&myviso);
       pthread_join(thread1,NULL);
 
-      if(to_consider==true)
+      if(to_consider==true)// && !(loopsize+i+3>=2315 && result.match+1==1199)) //verify this later
       {
-        pthread_mutex_lock(&myMutex1);
+          cout<<"   T O   C O N S I D E R    I S     T R U E "<<endl;
+	if(!mythread_comm.first_loop_just_found && !mythread_comm.normal_postloop_flow && !firstcasetrue){
+            pthread_mutex_lock(&myMutex1);
+            mythread_comm.first_loop_just_found = true;
+            pthread_mutex_unlock(&myMutex1);
+	}
         std::cout<<"FROM DLOOP"<<std::endl;
         
         //change
         if(firstcasetrue){//both from second loop
             std::string pref="///// from dloop (struct g2o) 2nd loop intra ////";
+            while(mythread_comm.in_viso_g2oedge){std::cout<<"waiting"<<std::endl;}
+            pthread_mutex_lock(&myMutex1);
+            mythread_comm.in_dloop_g2oedge=true;
             ss = my_for_g2o_edge(loopsize+i+3,result.match+2,myviso.relate,isam2,true,nfg,pref); //CHECKS
+            mythread_comm.in_dloop_g2oedge=false;
+            pthread_mutex_unlock(&myMutex1);
+
+
         }
         else{ //match is from first loop
+            while(mythread_comm.in_viso_g2oedge){std::cout<<"waiting"<<std::endl;}
+            pthread_mutex_lock(&myMutex1);
             std::string pref="///// from dloop (struct g2o) 1st & 2nd loop //////";
+            mythread_comm.in_dloop_g2oedge=true;
             ss = my_for_g2o_edge(loopsize+i+3,result.match+1,myviso.relate,isam2,true,nfg,pref);
+            mythread_comm.in_dloop_g2oedge=false;
+            pthread_mutex_unlock(&myMutex1);
+
+
         }
-        pthread_mutex_unlock(&myMutex1);
         std::cout<<"after struct g2o edge called from dloop has returned"<<std::endl;
         mywriter.my_write_file << comment + ss + "# Done loop closure\n" << endl;
         mywriter.g2o_string = mywriter.g2o_string + comment + ss + "# Done loop closure\n";
@@ -717,7 +736,9 @@ void demoDetector<TVocabulary, TDetector, TDescriptor>::runSession
         
         inliercount++;
       }
-
+      else{
+          cout<<"   T O   C O N S I D E R    I S     F A L S E"<<endl;
+      }
       
     }
     else
@@ -798,6 +819,7 @@ void demoDetector<TVocabulary, TDetector, TDescriptor>::runSession
   mythread_comm.loop_write_done = true;
 
   cvDestroyWindow("Display window");
+  //transforms.close();
 }
 
 

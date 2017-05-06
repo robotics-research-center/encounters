@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include g2o/types/sba/CMakeFiles/types_sba.dir/depend.make
@@ -59,16 +59,16 @@ include g2o/types/sba/CMakeFiles/types_sba.dir/flags.make
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o: g2o/types/sba/CMakeFiles/types_sba.dir/flags.make
 g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o: ../g2o/types/sba/types_sba.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_sba.dir/types_sba.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_sba.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_sba.dir/types_sba.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_sba.cpp
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_sba.dir/types_sba.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_sba.cpp > CMakeFiles/types_sba.dir/types_sba.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_sba.cpp > CMakeFiles/types_sba.dir/types_sba.cpp.i
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_sba.dir/types_sba.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_sba.cpp -o CMakeFiles/types_sba.dir/types_sba.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_sba.cpp -o CMakeFiles/types_sba.dir/types_sba.cpp.s
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o.requires:
 
@@ -83,16 +83,16 @@ g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o.provides.build: g2o/types
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o: g2o/types/sba/CMakeFiles/types_sba.dir/flags.make
 g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o: ../g2o/types/sba/types_six_dof_expmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_six_dof_expmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_six_dof_expmap.cpp
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_six_dof_expmap.cpp > CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_six_dof_expmap.cpp > CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_six_dof_expmap.cpp -o CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_six_dof_expmap.cpp -o CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s
 
 g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o.requires:
 
@@ -117,9 +117,9 @@ types_sba_EXTERNAL_OBJECTS =
 ../lib/libg2o_types_sba.a: g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o
 ../lib/libg2o_types_sba.a: g2o/types/sba/CMakeFiles/types_sba.dir/build.make
 ../lib/libg2o_types_sba.a: g2o/types/sba/CMakeFiles/types_sba.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../../../../lib/libg2o_types_sba.a"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && $(CMAKE_COMMAND) -P CMakeFiles/types_sba.dir/cmake_clean_target.cmake
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/types_sba.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../../../../lib/libg2o_types_sba.a"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && $(CMAKE_COMMAND) -P CMakeFiles/types_sba.dir/cmake_clean_target.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/types_sba.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 g2o/types/sba/CMakeFiles/types_sba.dir/build: ../lib/libg2o_types_sba.a
@@ -132,10 +132,10 @@ g2o/types/sba/CMakeFiles/types_sba.dir/requires: g2o/types/sba/CMakeFiles/types_
 .PHONY : g2o/types/sba/CMakeFiles/types_sba.dir/requires
 
 g2o/types/sba/CMakeFiles/types_sba.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba && $(CMAKE_COMMAND) -P CMakeFiles/types_sba.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba && $(CMAKE_COMMAND) -P CMakeFiles/types_sba.dir/cmake_clean.cmake
 .PHONY : g2o/types/sba/CMakeFiles/types_sba.dir/clean
 
 g2o/types/sba/CMakeFiles/types_sba.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba/CMakeFiles/types_sba.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba/CMakeFiles/types_sba.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : g2o/types/sba/CMakeFiles/types_sba.dir/depend
 

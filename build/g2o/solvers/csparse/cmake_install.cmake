@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,16 +41,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_solver_csparse.a")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/lib/libg2o_solver_csparse.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so"
-         RPATH "")
-  endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/usr/local/lib/libg2o_csparse_extension.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -59,13 +53,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_csparse_extension.so")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/libg2o_csparse_extension.so")
-    endif()
-  endif()
+file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse/CMakeFiles/CMakeRelink.dir/libg2o_csparse_extension.so")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -78,10 +66,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local/include/g2o/solvers/csparse" TYPE FILE FILES
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/g2o_csparse_extension_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/csparse_helper.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/g2o_csparse_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/linear_solver_csparse.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/g2o_csparse_extension_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/csparse_helper.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/g2o_csparse_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/linear_solver_csparse.h"
     )
 endif()
 

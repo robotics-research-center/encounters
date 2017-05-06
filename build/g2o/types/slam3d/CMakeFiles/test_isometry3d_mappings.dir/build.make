@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/depend.make
@@ -59,16 +59,16 @@ include g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/flags.make
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o: g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/flags.make
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o: ../g2o/types/slam3d/test_isometry3d_mappings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/test_isometry3d_mappings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/test_isometry3d_mappings.cpp
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/test_isometry3d_mappings.cpp > CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/test_isometry3d_mappings.cpp > CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.i
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/test_isometry3d_mappings.cpp -o CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/test_isometry3d_mappings.cpp -o CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.s
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/test_isometry3d_mappings.cpp.o.requires:
 
@@ -97,8 +97,8 @@ test_isometry3d_mappings: ../lib/libg2o_opengl_helper.a
 test_isometry3d_mappings: /usr/lib/x86_64-linux-gnu/libGLU.so
 test_isometry3d_mappings: /usr/lib/x86_64-linux-gnu/libGL.so
 test_isometry3d_mappings: g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../test_isometry3d_mappings"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_isometry3d_mappings.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../test_isometry3d_mappings"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_isometry3d_mappings.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/build: test_isometry3d_mappings
@@ -110,10 +110,10 @@ g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/requires: g2o/types/sla
 .PHONY : g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/requires
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/test_isometry3d_mappings.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/test_isometry3d_mappings.dir/cmake_clean.cmake
 .PHONY : g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/clean
 
 g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : g2o/types/slam3d/CMakeFiles/test_isometry3d_mappings.dir/depend
 

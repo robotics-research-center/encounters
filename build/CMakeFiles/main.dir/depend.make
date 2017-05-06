@@ -59,6 +59,12 @@ CMakeFiles/main.dir/main.cpp.o: ../includes/threadcomm.h
 CMakeFiles/main.dir/main.cpp.o: ../includes/viso.h
 CMakeFiles/main.dir/main.cpp.o: ../includes/viso_stereo.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv/cxcore.h
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz.hpp
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/types.hpp
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/viz3d.hpp
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/vizcore.hpp
+CMakeFiles/main.dir/main.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/widgets.hpp
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Cholesky
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Core
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Dense
@@ -261,7 +267,6 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/sr
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/gtsam/base/ConcurrentMap.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/gtsam/base/DerivedValue.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/gtsam/base/FastDefaultAllocator.h
@@ -497,6 +502,12 @@ CMakeFiles/main.dir/src/helperfunctions.cpp.o: ../includes/threadcomm.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: ../includes/viso.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: ../includes/viso_stereo.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: ../src/helperfunctions.cpp
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv/cxcore.h
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz.hpp
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/types.hpp
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/viz3d.hpp
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/vizcore.hpp
+CMakeFiles/main.dir/src/helperfunctions.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/viz/widgets.hpp
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Cholesky
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Core
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/Dense
@@ -702,7 +713,6 @@ CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/gtsam/3rdparty/Eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/g2o/config.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/g2o/core/batch_stats.h
 CMakeFiles/main.dir/src/helperfunctions.cpp.o: /usr/local/lib/cmake/GTSAM/../../../include/g2o/core/block_solver.h

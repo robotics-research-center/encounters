@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include g2o/stuff/CMakeFiles/stuff.dir/depend.make
@@ -59,16 +59,16 @@ include g2o/stuff/CMakeFiles/stuff.dir/flags.make
 
 g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o: ../g2o/stuff/timeutil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/timeutil.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/timeutil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/timeutil.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/timeutil.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/timeutil.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/timeutil.cpp > CMakeFiles/stuff.dir/timeutil.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/timeutil.cpp > CMakeFiles/stuff.dir/timeutil.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/timeutil.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/timeutil.cpp -o CMakeFiles/stuff.dir/timeutil.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/timeutil.cpp -o CMakeFiles/stuff.dir/timeutil.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o.requires:
 
@@ -83,16 +83,16 @@ g2o/stuff/CMakeFiles/stuff.dir/timeutil.cpp.o.provides.build: g2o/stuff/CMakeFil
 
 g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o: ../g2o/stuff/command_args.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/command_args.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/command_args.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/command_args.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/command_args.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/command_args.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/command_args.cpp > CMakeFiles/stuff.dir/command_args.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/command_args.cpp > CMakeFiles/stuff.dir/command_args.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/command_args.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/command_args.cpp -o CMakeFiles/stuff.dir/command_args.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/command_args.cpp -o CMakeFiles/stuff.dir/command_args.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o.requires:
 
@@ -107,16 +107,16 @@ g2o/stuff/CMakeFiles/stuff.dir/command_args.cpp.o.provides.build: g2o/stuff/CMak
 
 g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o: ../g2o/stuff/sparse_helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/sparse_helper.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sparse_helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/sparse_helper.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sparse_helper.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/sparse_helper.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sparse_helper.cpp > CMakeFiles/stuff.dir/sparse_helper.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sparse_helper.cpp > CMakeFiles/stuff.dir/sparse_helper.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/sparse_helper.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sparse_helper.cpp -o CMakeFiles/stuff.dir/sparse_helper.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sparse_helper.cpp -o CMakeFiles/stuff.dir/sparse_helper.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o.requires:
 
@@ -131,16 +131,16 @@ g2o/stuff/CMakeFiles/stuff.dir/sparse_helper.cpp.o.provides.build: g2o/stuff/CMa
 
 g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o: ../g2o/stuff/os_specific.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/stuff.dir/os_specific.c.o   -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/stuff.dir/os_specific.c.o   -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.c
 
 g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/stuff.dir/os_specific.c.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.c > CMakeFiles/stuff.dir/os_specific.c.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.c > CMakeFiles/stuff.dir/os_specific.c.i
 
 g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/stuff.dir/os_specific.c.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.c -o CMakeFiles/stuff.dir/os_specific.c.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.c -o CMakeFiles/stuff.dir/os_specific.c.s
 
 g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o.requires:
 
@@ -155,16 +155,16 @@ g2o/stuff/CMakeFiles/stuff.dir/os_specific.c.o.provides.build: g2o/stuff/CMakeFi
 
 g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o: ../g2o/stuff/filesys_tools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/filesys_tools.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/filesys_tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/filesys_tools.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/filesys_tools.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/filesys_tools.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/filesys_tools.cpp > CMakeFiles/stuff.dir/filesys_tools.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/filesys_tools.cpp > CMakeFiles/stuff.dir/filesys_tools.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/filesys_tools.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/filesys_tools.cpp -o CMakeFiles/stuff.dir/filesys_tools.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/filesys_tools.cpp -o CMakeFiles/stuff.dir/filesys_tools.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o.requires:
 
@@ -179,16 +179,16 @@ g2o/stuff/CMakeFiles/stuff.dir/filesys_tools.cpp.o.provides.build: g2o/stuff/CMa
 
 g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o: ../g2o/stuff/string_tools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/string_tools.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/string_tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/string_tools.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/string_tools.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/string_tools.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/string_tools.cpp > CMakeFiles/stuff.dir/string_tools.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/string_tools.cpp > CMakeFiles/stuff.dir/string_tools.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/string_tools.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/string_tools.cpp -o CMakeFiles/stuff.dir/string_tools.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/string_tools.cpp -o CMakeFiles/stuff.dir/string_tools.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o.requires:
 
@@ -203,16 +203,16 @@ g2o/stuff/CMakeFiles/stuff.dir/string_tools.cpp.o.provides.build: g2o/stuff/CMak
 
 g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o: ../g2o/stuff/property.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/property.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/property.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/property.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/property.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/property.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/property.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/property.cpp > CMakeFiles/stuff.dir/property.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/property.cpp > CMakeFiles/stuff.dir/property.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/property.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/property.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/property.cpp -o CMakeFiles/stuff.dir/property.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/property.cpp -o CMakeFiles/stuff.dir/property.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o.requires:
 
@@ -227,16 +227,16 @@ g2o/stuff/CMakeFiles/stuff.dir/property.cpp.o.provides.build: g2o/stuff/CMakeFil
 
 g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o: ../g2o/stuff/sampler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/sampler.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sampler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/sampler.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sampler.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/sampler.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sampler.cpp > CMakeFiles/stuff.dir/sampler.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sampler.cpp > CMakeFiles/stuff.dir/sampler.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/sampler.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/sampler.cpp -o CMakeFiles/stuff.dir/sampler.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/sampler.cpp -o CMakeFiles/stuff.dir/sampler.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o.requires:
 
@@ -251,16 +251,16 @@ g2o/stuff/CMakeFiles/stuff.dir/sampler.cpp.o.provides.build: g2o/stuff/CMakeFile
 
 g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o: g2o/stuff/CMakeFiles/stuff.dir/flags.make
 g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o: ../g2o/stuff/tictoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/tictoc.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/tictoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stuff.dir/tictoc.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/tictoc.cpp
 
 g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stuff.dir/tictoc.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/tictoc.cpp > CMakeFiles/stuff.dir/tictoc.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/tictoc.cpp > CMakeFiles/stuff.dir/tictoc.cpp.i
 
 g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stuff.dir/tictoc.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/tictoc.cpp -o CMakeFiles/stuff.dir/tictoc.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/tictoc.cpp -o CMakeFiles/stuff.dir/tictoc.cpp.s
 
 g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o.requires:
 
@@ -299,9 +299,9 @@ stuff_EXTERNAL_OBJECTS =
 ../lib/libg2o_stuff.a: g2o/stuff/CMakeFiles/stuff.dir/tictoc.cpp.o
 ../lib/libg2o_stuff.a: g2o/stuff/CMakeFiles/stuff.dir/build.make
 ../lib/libg2o_stuff.a: g2o/stuff/CMakeFiles/stuff.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library ../../../lib/libg2o_stuff.a"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && $(CMAKE_COMMAND) -P CMakeFiles/stuff.dir/cmake_clean_target.cmake
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stuff.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library ../../../lib/libg2o_stuff.a"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && $(CMAKE_COMMAND) -P CMakeFiles/stuff.dir/cmake_clean_target.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stuff.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 g2o/stuff/CMakeFiles/stuff.dir/build: ../lib/libg2o_stuff.a
@@ -321,10 +321,10 @@ g2o/stuff/CMakeFiles/stuff.dir/requires: g2o/stuff/CMakeFiles/stuff.dir/tictoc.c
 .PHONY : g2o/stuff/CMakeFiles/stuff.dir/requires
 
 g2o/stuff/CMakeFiles/stuff.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff && $(CMAKE_COMMAND) -P CMakeFiles/stuff.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff && $(CMAKE_COMMAND) -P CMakeFiles/stuff.dir/cmake_clean.cmake
 .PHONY : g2o/stuff/CMakeFiles/stuff.dir/clean
 
 g2o/stuff/CMakeFiles/stuff.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/stuff/CMakeFiles/stuff.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/stuff/CMakeFiles/stuff.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : g2o/stuff/CMakeFiles/stuff.dir/depend
 

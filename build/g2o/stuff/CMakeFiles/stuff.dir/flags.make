@@ -7,11 +7,11 @@ C_FLAGS =   -Wall -W
 
 C_DEFINES = -DUNIX
 
-C_INCLUDES = -I/usr/local/lib/cmake/GTSAM/../../../include -I/usr/local/include/gtsam/3rdparty/Eigen -I/home/gunshi/Downloads/MultiRobot/slam/cair -I/usr/include/eigen3 -I/home/gunshi/Downloads/MultiRobot/slam/cair/build 
+C_INCLUDES = -I/usr/local/lib/cmake/GTSAM/../../../include -I/usr/local/include/gtsam/3rdparty/Eigen -I/home/gunshi/Downloads/MultiRobot/3dmerge -I/usr/include/eigen3 -I/home/gunshi/Downloads/MultiRobot/3dmerge/build 
 
 CXX_FLAGS =  -std=c++11  -Wall -W  
 
 CXX_DEFINES = -DUNIX
 
-CXX_INCLUDES = -I/usr/local/lib/cmake/GTSAM/../../../include -I/usr/local/include/gtsam/3rdparty/Eigen -I/home/gunshi/Downloads/MultiRobot/slam/cair -I/usr/include/eigen3 -I/home/gunshi/Downloads/MultiRobot/slam/cair/build 
+CXX_INCLUDES = -I/usr/local/lib/cmake/GTSAM/../../../include -I/usr/local/include/gtsam/3rdparty/Eigen -I/home/gunshi/Downloads/MultiRobot/3dmerge -I/usr/include/eigen3 -I/home/gunshi/Downloads/MultiRobot/3dmerge/build 
 

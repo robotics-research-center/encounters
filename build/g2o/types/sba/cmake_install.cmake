@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,7 +41,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_types_sba.a")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/lib/libg2o_types_sba.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,10 +54,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local/include/g2o/types/sba" TYPE FILE FILES
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/g2o_types_sba_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_sba.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/sbacam.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/sba/types_six_dof_expmap.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/g2o_types_sba_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_sba.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/sbacam.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/sba/types_six_dof_expmap.h"
     )
 endif()
 

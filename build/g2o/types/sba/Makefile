@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,28 +78,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -110,6 +88,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,14 +113,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/sba/CMakeFiles/progress.marks
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/sba/CMakeFiles/progress.marks
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/clean
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 g2o/types/sba/CMakeFiles/types_sba.dir/rule:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/CMakeFiles/types_sba.dir/rule
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/sba/CMakeFiles/types_sba.dir/rule
 .PHONY : g2o/types/sba/CMakeFiles/types_sba.dir/rule
 
 # Convenience name for target.
@@ -166,7 +155,7 @@ types_sba: g2o/types/sba/CMakeFiles/types_sba.dir/rule
 
 # fast build rule for target.
 types_sba/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/build
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/build
 .PHONY : types_sba/fast
 
 types_sba.o: types_sba.cpp.o
@@ -175,7 +164,7 @@ types_sba.o: types_sba.cpp.o
 
 # target to build an object file
 types_sba.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.o
 .PHONY : types_sba.cpp.o
 
 types_sba.i: types_sba.cpp.i
@@ -184,7 +173,7 @@ types_sba.i: types_sba.cpp.i
 
 # target to preprocess a source file
 types_sba.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.i
 .PHONY : types_sba.cpp.i
 
 types_sba.s: types_sba.cpp.s
@@ -193,7 +182,7 @@ types_sba.s: types_sba.cpp.s
 
 # target to generate assembly for a file
 types_sba.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_sba.cpp.s
 .PHONY : types_sba.cpp.s
 
 types_six_dof_expmap.o: types_six_dof_expmap.cpp.o
@@ -202,7 +191,7 @@ types_six_dof_expmap.o: types_six_dof_expmap.cpp.o
 
 # target to build an object file
 types_six_dof_expmap.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.o
 .PHONY : types_six_dof_expmap.cpp.o
 
 types_six_dof_expmap.i: types_six_dof_expmap.cpp.i
@@ -211,7 +200,7 @@ types_six_dof_expmap.i: types_six_dof_expmap.cpp.i
 
 # target to preprocess a source file
 types_six_dof_expmap.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.i
 .PHONY : types_six_dof_expmap.cpp.i
 
 types_six_dof_expmap.s: types_six_dof_expmap.cpp.s
@@ -220,7 +209,7 @@ types_six_dof_expmap.s: types_six_dof_expmap.cpp.s
 
 # target to generate assembly for a file
 types_six_dof_expmap.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/sba/CMakeFiles/types_sba.dir/build.make g2o/types/sba/CMakeFiles/types_sba.dir/types_six_dof_expmap.cpp.s
 .PHONY : types_six_dof_expmap.cpp.s
 
 # Help Target
@@ -231,10 +220,9 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
 	@echo "... types_sba"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... types_sba.o"
 	@echo "... types_sba.i"
@@ -253,6 +241,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

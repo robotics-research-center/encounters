@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -41,7 +41,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/slam/cair/lib/libg2o_types_slam2d_addons.a")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gunshi/Downloads/MultiRobot/3dmerge/lib/libg2o_types_slam2d_addons.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,17 +54,17 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local/include/g2o/types/slam2d_addons" TYPE FILE FILES
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_se2_segment2d_line.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_se2_segment2d_pointLine.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_line2d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/g2o_types_slam2d_addons_api.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_se2_line2d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/vertex_line2d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_se2_segment2d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/types_slam2d_addons.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/vertex_segment2d.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/edge_line2d_pointxy.h"
-    "/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam2d_addons/line_2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_se2_segment2d_line.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_se2_segment2d_pointLine.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_line2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/g2o_types_slam2d_addons_api.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_se2_line2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/vertex_line2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_se2_segment2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/types_slam2d_addons.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/vertex_segment2d.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/edge_line2d_pointxy.h"
+    "/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam2d_addons/line_2d.h"
     )
 endif()
 

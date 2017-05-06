@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include g2o/types/slam3d/CMakeFiles/types_slam3d.dir/depend.make
@@ -59,16 +59,16 @@ include g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o: ../g2o/types/slam3d/dquat2mat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/dquat2mat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/dquat2mat.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/dquat2mat.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/dquat2mat.cpp > CMakeFiles/types_slam3d.dir/dquat2mat.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/dquat2mat.cpp > CMakeFiles/types_slam3d.dir/dquat2mat.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/dquat2mat.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/dquat2mat.cpp -o CMakeFiles/types_slam3d.dir/dquat2mat.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/dquat2mat.cpp -o CMakeFiles/types_slam3d.dir/dquat2mat.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o.requires:
 
@@ -83,16 +83,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/dquat2mat.cpp.o.provides.build: g2o
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o: ../g2o/types/slam3d/isometry3d_mappings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_mappings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_mappings.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_mappings.cpp > CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_mappings.cpp > CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_mappings.cpp -o CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_mappings.cpp -o CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o.requires:
 
@@ -107,16 +107,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_mappings.cpp.o.provides.
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o: ../g2o/types/slam3d/isometry3d_gradients.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_gradients.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_gradients.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_gradients.cpp > CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_gradients.cpp > CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/isometry3d_gradients.cpp -o CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/isometry3d_gradients.cpp -o CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o.requires:
 
@@ -131,16 +131,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/isometry3d_gradients.cpp.o.provides
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o: ../g2o/types/slam3d/vertex_se3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_se3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_se3.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/vertex_se3.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_se3.cpp > CMakeFiles/types_slam3d.dir/vertex_se3.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_se3.cpp > CMakeFiles/types_slam3d.dir/vertex_se3.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/vertex_se3.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_se3.cpp -o CMakeFiles/types_slam3d.dir/vertex_se3.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_se3.cpp -o CMakeFiles/types_slam3d.dir/vertex_se3.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o.requires:
 
@@ -155,16 +155,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_se3.cpp.o.provides.build: g2
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o: ../g2o/types/slam3d/parameter_se3_offset.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_se3_offset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_se3_offset.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_se3_offset.cpp > CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_se3_offset.cpp > CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_se3_offset.cpp -o CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_se3_offset.cpp -o CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o.requires:
 
@@ -179,16 +179,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_se3_offset.cpp.o.provides
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o: ../g2o/types/slam3d/edge_se3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3.cpp > CMakeFiles/types_slam3d.dir/edge_se3.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3.cpp > CMakeFiles/types_slam3d.dir/edge_se3.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3.cpp -o CMakeFiles/types_slam3d.dir/edge_se3.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3.cpp -o CMakeFiles/types_slam3d.dir/edge_se3.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o.requires:
 
@@ -203,16 +203,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3.cpp.o.provides.build: g2o/
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o: ../g2o/types/slam3d/edge_se3_offset.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_offset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_offset.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_offset.cpp > CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_offset.cpp > CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_offset.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_offset.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o.requires:
 
@@ -227,16 +227,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_offset.cpp.o.provides.buil
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o: ../g2o/types/slam3d/vertex_pointxyz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_pointxyz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_pointxyz.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_pointxyz.cpp > CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_pointxyz.cpp > CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/vertex_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/vertex_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o.requires:
 
@@ -251,16 +251,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/vertex_pointxyz.cpp.o.provides.buil
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o: ../g2o/types/slam3d/parameter_camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_camera.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/parameter_camera.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_camera.cpp > CMakeFiles/types_slam3d.dir/parameter_camera.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_camera.cpp > CMakeFiles/types_slam3d.dir/parameter_camera.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/parameter_camera.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_camera.cpp -o CMakeFiles/types_slam3d.dir/parameter_camera.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_camera.cpp -o CMakeFiles/types_slam3d.dir/parameter_camera.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o.requires:
 
@@ -275,16 +275,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_camera.cpp.o.provides.bui
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o: ../g2o/types/slam3d/parameter_stereo_camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_stereo_camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_stereo_camera.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_stereo_camera.cpp > CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_stereo_camera.cpp > CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/parameter_stereo_camera.cpp -o CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/parameter_stereo_camera.cpp -o CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o.requires:
 
@@ -299,16 +299,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/parameter_stereo_camera.cpp.o.provi
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o: ../g2o/types/slam3d/edge_se3_pointxyz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o.requires:
 
@@ -323,16 +323,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz.cpp.o.provides.bu
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o: ../g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_disparity.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o.requires:
 
@@ -347,16 +347,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_disparity.cpp.o.p
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o: ../g2o/types/slam3d/edge_se3_pointxyz_depth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp > CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_pointxyz_depth.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o.requires:
 
@@ -371,16 +371,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_pointxyz_depth.cpp.o.provi
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o: ../g2o/types/slam3d/edge_se3_prior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_prior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_prior.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_prior.cpp > CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_prior.cpp > CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_prior.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_prior.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o.requires:
 
@@ -395,16 +395,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_prior.cpp.o.provides.build
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o: ../g2o/types/slam3d/edge_se3_lotsofxyz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_lotsofxyz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_lotsofxyz.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_lotsofxyz.cpp > CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_lotsofxyz.cpp > CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_se3_lotsofxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_se3_lotsofxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o.requires:
 
@@ -419,16 +419,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_se3_lotsofxyz.cpp.o.provides.b
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o: ../g2o/types/slam3d/edge_pointxyz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_pointxyz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_pointxyz.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_pointxyz.cpp > CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_pointxyz.cpp > CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/edge_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/edge_pointxyz.cpp -o CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o.requires:
 
@@ -443,16 +443,16 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/edge_pointxyz.cpp.o.provides.build:
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/flags.make
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o: ../g2o/types/slam3d/types_slam3d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/types_slam3d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/types_slam3d.cpp
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/types_slam3d.dir/types_slam3d.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/types_slam3d.cpp > CMakeFiles/types_slam3d.dir/types_slam3d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/types_slam3d.cpp > CMakeFiles/types_slam3d.dir/types_slam3d.cpp.i
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/types_slam3d.dir/types_slam3d.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d/types_slam3d.cpp -o CMakeFiles/types_slam3d.dir/types_slam3d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d/types_slam3d.cpp -o CMakeFiles/types_slam3d.dir/types_slam3d.cpp.s
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o.requires:
 
@@ -507,9 +507,9 @@ types_slam3d_EXTERNAL_OBJECTS =
 ../lib/libg2o_types_slam3d.a: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/types_slam3d.cpp.o
 ../lib/libg2o_types_slam3d.a: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/build.make
 ../lib/libg2o_types_slam3d.a: g2o/types/slam3d/CMakeFiles/types_slam3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX static library ../../../../lib/libg2o_types_slam3d.a"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/types_slam3d.dir/cmake_clean_target.cmake
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/types_slam3d.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX static library ../../../../lib/libg2o_types_slam3d.a"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/types_slam3d.dir/cmake_clean_target.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/types_slam3d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/build: ../lib/libg2o_types_slam3d.a
@@ -537,10 +537,10 @@ g2o/types/slam3d/CMakeFiles/types_slam3d.dir/requires: g2o/types/slam3d/CMakeFil
 .PHONY : g2o/types/slam3d/CMakeFiles/types_slam3d.dir/requires
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/types_slam3d.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d && $(CMAKE_COMMAND) -P CMakeFiles/types_slam3d.dir/cmake_clean.cmake
 .PHONY : g2o/types/slam3d/CMakeFiles/types_slam3d.dir/clean
 
 g2o/types/slam3d/CMakeFiles/types_slam3d.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam3d/CMakeFiles/types_slam3d.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam3d/CMakeFiles/types_slam3d.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : g2o/types/slam3d/CMakeFiles/types_slam3d.dir/depend
 

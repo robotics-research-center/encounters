@@ -1,4 +1,4 @@
-# Install script for directory: /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL
+# Install script for directory: /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut/cmake_install.cmake")
+  include("/home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut/cmake_install.cmake")
 
 endif()
 

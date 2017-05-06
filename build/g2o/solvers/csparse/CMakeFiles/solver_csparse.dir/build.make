@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/depend.make
@@ -59,16 +59,16 @@ include g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/flags.make
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o: g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/flags.make
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o: ../g2o/solvers/csparse/solver_csparse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/solver_csparse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/solver_csparse.cpp
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/solver_csparse.dir/solver_csparse.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/solver_csparse.cpp > CMakeFiles/solver_csparse.dir/solver_csparse.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/solver_csparse.cpp > CMakeFiles/solver_csparse.dir/solver_csparse.cpp.i
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/solver_csparse.dir/solver_csparse.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse/solver_csparse.cpp -o CMakeFiles/solver_csparse.dir/solver_csparse.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse/solver_csparse.cpp -o CMakeFiles/solver_csparse.dir/solver_csparse.cpp.s
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o.requires:
 
@@ -91,9 +91,9 @@ solver_csparse_EXTERNAL_OBJECTS =
 ../lib/libg2o_solver_csparse.a: g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/solver_csparse.cpp.o
 ../lib/libg2o_solver_csparse.a: g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/build.make
 ../lib/libg2o_solver_csparse.a: g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../lib/libg2o_solver_csparse.a"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -P CMakeFiles/solver_csparse.dir/cmake_clean_target.cmake
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/solver_csparse.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../lib/libg2o_solver_csparse.a"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -P CMakeFiles/solver_csparse.dir/cmake_clean_target.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/solver_csparse.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/build: ../lib/libg2o_solver_csparse.a
@@ -105,10 +105,10 @@ g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/requires: g2o/solvers/csparse/
 .PHONY : g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/requires
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -P CMakeFiles/solver_csparse.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse && $(CMAKE_COMMAND) -P CMakeFiles/solver_csparse.dir/cmake_clean.cmake
 .PHONY : g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/clean
 
 g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/g2o/solvers/csparse /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/g2o/solvers/csparse /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : g2o/solvers/csparse/CMakeFiles/solver_csparse.dir/depend
 

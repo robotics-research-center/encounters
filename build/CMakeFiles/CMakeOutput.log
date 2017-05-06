@@ -666,3 +666,573 @@ Linking C executable cmTC_d809b
 make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles/CMakeTmp'
 
 
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6d7f3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d7f3.dir/build.make CMakeFiles/cmTC_6d7f3.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d7f3.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DBLAS_USE_F2C  -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_6d7f3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6d7f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d7f3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_6d7f3.dir/CheckFunctionExists.c.o  -o cmTC_6d7f3 -rdynamic /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dd18b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dd18b.dir/build.make CMakeFiles/cmTC_dd18b.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dd18b.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_dd18b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dd18b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd18b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_dd18b.dir/CheckFunctionExists.c.o  -o cmTC_dd18b -rdynamic /usr/lib/liblapack.so /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2a0bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a0bf.dir/build.make CMakeFiles/cmTC_2a0bf.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2a0bf.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -DLAPACK_USE_F2C -I/usr/include/qt4   -o CMakeFiles/cmTC_2a0bf.dir/CheckSymbolExists.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_2a0bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a0bf.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_2a0bf.dir/CheckSymbolExists.cxx.o  -o cmTC_2a0bf -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+File /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_65977/fast"
+/usr/bin/make -f CMakeFiles/cmTC_65977.dir/build.make CMakeFiles/cmTC_65977.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_65977.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_65977.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_65977
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65977.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_65977.dir/src.cxx.o  -o cmTC_65977 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5080/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5080.dir/build.make CMakeFiles/cmTC_b5080.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b5080.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_b5080.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b5080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5080.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_b5080.dir/src.cxx.o  -o cmTC_b5080 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c966e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c966e.dir/build.make CMakeFiles/cmTC_c966e.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c966e.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W    -o CMakeFiles/cmTC_c966e.dir/CheckIncludeFile.c.o   -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c966e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c966e.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W     CMakeFiles/cmTC_c966e.dir/CheckIncludeFile.c.o  -o cmTC_c966e -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0c703/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0c703.dir/build.make CMakeFiles/cmTC_0c703.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0c703.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0c703.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0c703
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c703.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0c703.dir/CheckFunctionExists.c.o  -o cmTC_0c703 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e9c3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8e9c3.dir/build.make CMakeFiles/cmTC_8e9c3.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e9c3.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DBLAS_USE_F2C  -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_8e9c3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8e9c3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e9c3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_8e9c3.dir/CheckFunctionExists.c.o  -o cmTC_8e9c3 -rdynamic /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34931/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34931.dir/build.make CMakeFiles/cmTC_34931.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34931.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_34931.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_34931
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34931.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_34931.dir/CheckFunctionExists.c.o  -o cmTC_34931 -rdynamic /usr/lib/liblapack.so /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9dad4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9dad4.dir/build.make CMakeFiles/cmTC_9dad4.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9dad4.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -DLAPACK_USE_F2C -I/usr/include/qt4   -o CMakeFiles/cmTC_9dad4.dir/CheckSymbolExists.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_9dad4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dad4.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9dad4.dir/CheckSymbolExists.cxx.o  -o cmTC_9dad4 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+File /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_73b83/fast"
+/usr/bin/make -f CMakeFiles/cmTC_73b83.dir/build.make CMakeFiles/cmTC_73b83.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_73b83.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_73b83.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_73b83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73b83.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_73b83.dir/src.cxx.o  -o cmTC_73b83 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ef1b4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef1b4.dir/build.make CMakeFiles/cmTC_ef1b4.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ef1b4.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_ef1b4.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ef1b4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef1b4.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_ef1b4.dir/src.cxx.o  -o cmTC_ef1b4 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1444/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1444.dir/build.make CMakeFiles/cmTC_f1444.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f1444.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W    -o CMakeFiles/cmTC_f1444.dir/CheckIncludeFile.c.o   -c /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f1444
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1444.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W     CMakeFiles/cmTC_f1444.dir/CheckIncludeFile.c.o  -o cmTC_f1444 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc678/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc678.dir/build.make CMakeFiles/cmTC_bc678.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc678.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bc678.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bc678
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc678.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bc678.dir/CheckFunctionExists.c.o  -o cmTC_bc678 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/cair/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64a9b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64a9b.dir/build.make CMakeFiles/cmTC_64a9b.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64a9b.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DBLAS_USE_F2C  -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_64a9b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_64a9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64a9b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_64a9b.dir/CheckFunctionExists.c.o  -o cmTC_64a9b -rdynamic /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd113/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd113.dir/build.make CMakeFiles/cmTC_bd113.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd113.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_bd113.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bd113
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd113.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_bd113.dir/CheckFunctionExists.c.o  -o cmTC_bd113 -rdynamic /usr/lib/liblapack.so /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cc2c1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc2c1.dir/build.make CMakeFiles/cmTC_cc2c1.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cc2c1.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -DLAPACK_USE_F2C -I/usr/include/qt4   -o CMakeFiles/cmTC_cc2c1.dir/CheckSymbolExists.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_cc2c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc2c1.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_cc2c1.dir/CheckSymbolExists.cxx.o  -o cmTC_cc2c1 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+File /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f8ef3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f8ef3.dir/build.make CMakeFiles/cmTC_f8ef3.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f8ef3.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_f8ef3.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f8ef3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8ef3.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_f8ef3.dir/src.cxx.o  -o cmTC_f8ef3 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8215d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8215d.dir/build.make CMakeFiles/cmTC_8215d.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8215d.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_8215d.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8215d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8215d.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_8215d.dir/src.cxx.o  -o cmTC_8215d -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c7be3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c7be3.dir/build.make CMakeFiles/cmTC_c7be3.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7be3.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W    -o CMakeFiles/cmTC_c7be3.dir/CheckIncludeFile.c.o   -c /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c7be3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7be3.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W     CMakeFiles/cmTC_c7be3.dir/CheckIncludeFile.c.o  -o cmTC_c7be3 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09447/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09447.dir/build.make CMakeFiles/cmTC_09447.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09447.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09447.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09447
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09447.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_09447.dir/CheckFunctionExists.c.o  -o cmTC_09447 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d0074/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d0074.dir/build.make CMakeFiles/cmTC_d0074.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0074.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DBLAS_USE_F2C  -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_d0074.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d0074
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0074.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_d0074.dir/CheckFunctionExists.c.o  -o cmTC_d0074 -rdynamic /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2a8a9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a8a9.dir/build.make CMakeFiles/cmTC_2a8a9.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a8a9.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_2a8a9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2a8a9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a8a9.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_2a8a9.dir/CheckFunctionExists.c.o  -o cmTC_2a8a9 -rdynamic /usr/lib/liblapack.so /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6e188/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6e188.dir/build.make CMakeFiles/cmTC_6e188.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6e188.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -DLAPACK_USE_F2C -I/usr/include/qt4   -o CMakeFiles/cmTC_6e188.dir/CheckSymbolExists.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_6e188
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e188.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_6e188.dir/CheckSymbolExists.cxx.o  -o cmTC_6e188 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+File /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0f187/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0f187.dir/build.make CMakeFiles/cmTC_0f187.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0f187.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_0f187.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0f187
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f187.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_0f187.dir/src.cxx.o  -o cmTC_0f187 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_545bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_545bc.dir/build.make CMakeFiles/cmTC_545bc.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_545bc.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_545bc.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_545bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_545bc.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_545bc.dir/src.cxx.o  -o cmTC_545bc -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d9b6d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9b6d.dir/build.make CMakeFiles/cmTC_d9b6d.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9b6d.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W    -o CMakeFiles/cmTC_d9b6d.dir/CheckIncludeFile.c.o   -c /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d9b6d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9b6d.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W     CMakeFiles/cmTC_d9b6d.dir/CheckIncludeFile.c.o  -o cmTC_d9b6d -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6571e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6571e.dir/build.make CMakeFiles/cmTC_6571e.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6571e.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6571e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6571e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6571e.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6571e.dir/CheckFunctionExists.c.o  -o cmTC_6571e -rdynamic -lpthread 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/backward2/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_573e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_573e2.dir/build.make CMakeFiles/cmTC_573e2.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_573e2.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DBLAS_USE_F2C  -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_573e2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_573e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_573e2.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_573e2.dir/CheckFunctionExists.c.o  -o cmTC_573e2 -rdynamic /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cheev_ exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5be0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5be0.dir/build.make CMakeFiles/cmTC_b5be0.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5be0.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_b5be0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b5be0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5be0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_b5be0.dir/CheckFunctionExists.c.o  -o cmTC_b5be0 -rdynamic /usr/lib/liblapack.so /usr/lib/libblas.so 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02b76/fast"
+/usr/bin/make -f CMakeFiles/cmTC_02b76.dir/build.make CMakeFiles/cmTC_02b76.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_02b76.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -DLAPACK_USE_F2C -I/usr/include/qt4   -o CMakeFiles/cmTC_02b76.dir/CheckSymbolExists.cxx.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_02b76
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02b76.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_02b76.dir/CheckSymbolExists.cxx.o  -o cmTC_02b76 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+File /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2df5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2df5b.dir/build.make CMakeFiles/cmTC_2df5b.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2df5b.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_2df5b.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2df5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2df5b.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_2df5b.dir/src.cxx.o  -o cmTC_2df5b -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eb1ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb1ba.dir/build.make CMakeFiles/cmTC_eb1ba.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eb1ba.dir/src.cxx.o
+/usr/bin/c++     -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_eb1ba.dir/src.cxx.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_eb1ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb1ba.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_eb1ba.dir/src.cxx.o  -o cmTC_eb1ba -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_54e57/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54e57.dir/build.make CMakeFiles/cmTC_54e57.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54e57.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W    -o CMakeFiles/cmTC_54e57.dir/CheckIncludeFile.c.o   -c /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_54e57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54e57.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W     CMakeFiles/cmTC_54e57.dir/CheckIncludeFile.c.o  -o cmTC_54e57 -rdynamic 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aaeda/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aaeda.dir/build.make CMakeFiles/cmTC_aaeda.dir/build
+make[1]: Entering directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aaeda.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DLAPACK_USE_F2C  -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aaeda.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aaeda
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaeda.dir/link.txt --verbose=1
+/usr/bin/cc    -Wall -W -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_aaeda.dir/CheckFunctionExists.c.o  -o cmTC_aaeda -rdynamic -lpthread 
+make[1]: Leaving directory '/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles/CMakeTmp'
+
+

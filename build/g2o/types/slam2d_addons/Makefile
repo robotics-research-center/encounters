@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,17 +78,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -99,17 +88,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -122,16 +100,27 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/slam/cair/build/g2o/types/slam2d_addons/CMakeFiles/progress.marks
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles /home/gunshi/Downloads/MultiRobot/3dmerge/build/g2o/types/slam2d_addons/CMakeFiles/progress.marks
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/clean
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/preinstall
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/rule:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/rule
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f CMakeFiles/Makefile2 g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/rule
 .PHONY : g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/rule
 
 # Convenience name for target.
@@ -166,7 +155,7 @@ types_slam2d_addons: g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/
 
 # fast build rule for target.
 types_slam2d_addons/fast:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build
 .PHONY : types_slam2d_addons/fast
 
 edge_line2d.o: edge_line2d.cpp.o
@@ -175,7 +164,7 @@ edge_line2d.o: edge_line2d.cpp.o
 
 # target to build an object file
 edge_line2d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.o
 .PHONY : edge_line2d.cpp.o
 
 edge_line2d.i: edge_line2d.cpp.i
@@ -184,7 +173,7 @@ edge_line2d.i: edge_line2d.cpp.i
 
 # target to preprocess a source file
 edge_line2d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.i
 .PHONY : edge_line2d.cpp.i
 
 edge_line2d.s: edge_line2d.cpp.s
@@ -193,7 +182,7 @@ edge_line2d.s: edge_line2d.cpp.s
 
 # target to generate assembly for a file
 edge_line2d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d.cpp.s
 .PHONY : edge_line2d.cpp.s
 
 edge_line2d_pointxy.o: edge_line2d_pointxy.cpp.o
@@ -202,7 +191,7 @@ edge_line2d_pointxy.o: edge_line2d_pointxy.cpp.o
 
 # target to build an object file
 edge_line2d_pointxy.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.o
 .PHONY : edge_line2d_pointxy.cpp.o
 
 edge_line2d_pointxy.i: edge_line2d_pointxy.cpp.i
@@ -211,7 +200,7 @@ edge_line2d_pointxy.i: edge_line2d_pointxy.cpp.i
 
 # target to preprocess a source file
 edge_line2d_pointxy.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.i
 .PHONY : edge_line2d_pointxy.cpp.i
 
 edge_line2d_pointxy.s: edge_line2d_pointxy.cpp.s
@@ -220,7 +209,7 @@ edge_line2d_pointxy.s: edge_line2d_pointxy.cpp.s
 
 # target to generate assembly for a file
 edge_line2d_pointxy.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_line2d_pointxy.cpp.s
 .PHONY : edge_line2d_pointxy.cpp.s
 
 edge_se2_line2d.o: edge_se2_line2d.cpp.o
@@ -229,7 +218,7 @@ edge_se2_line2d.o: edge_se2_line2d.cpp.o
 
 # target to build an object file
 edge_se2_line2d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.o
 .PHONY : edge_se2_line2d.cpp.o
 
 edge_se2_line2d.i: edge_se2_line2d.cpp.i
@@ -238,7 +227,7 @@ edge_se2_line2d.i: edge_se2_line2d.cpp.i
 
 # target to preprocess a source file
 edge_se2_line2d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.i
 .PHONY : edge_se2_line2d.cpp.i
 
 edge_se2_line2d.s: edge_se2_line2d.cpp.s
@@ -247,7 +236,7 @@ edge_se2_line2d.s: edge_se2_line2d.cpp.s
 
 # target to generate assembly for a file
 edge_se2_line2d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_line2d.cpp.s
 .PHONY : edge_se2_line2d.cpp.s
 
 edge_se2_segment2d.o: edge_se2_segment2d.cpp.o
@@ -256,7 +245,7 @@ edge_se2_segment2d.o: edge_se2_segment2d.cpp.o
 
 # target to build an object file
 edge_se2_segment2d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.o
 .PHONY : edge_se2_segment2d.cpp.o
 
 edge_se2_segment2d.i: edge_se2_segment2d.cpp.i
@@ -265,7 +254,7 @@ edge_se2_segment2d.i: edge_se2_segment2d.cpp.i
 
 # target to preprocess a source file
 edge_se2_segment2d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.i
 .PHONY : edge_se2_segment2d.cpp.i
 
 edge_se2_segment2d.s: edge_se2_segment2d.cpp.s
@@ -274,7 +263,7 @@ edge_se2_segment2d.s: edge_se2_segment2d.cpp.s
 
 # target to generate assembly for a file
 edge_se2_segment2d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d.cpp.s
 .PHONY : edge_se2_segment2d.cpp.s
 
 edge_se2_segment2d_line.o: edge_se2_segment2d_line.cpp.o
@@ -283,7 +272,7 @@ edge_se2_segment2d_line.o: edge_se2_segment2d_line.cpp.o
 
 # target to build an object file
 edge_se2_segment2d_line.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.o
 .PHONY : edge_se2_segment2d_line.cpp.o
 
 edge_se2_segment2d_line.i: edge_se2_segment2d_line.cpp.i
@@ -292,7 +281,7 @@ edge_se2_segment2d_line.i: edge_se2_segment2d_line.cpp.i
 
 # target to preprocess a source file
 edge_se2_segment2d_line.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.i
 .PHONY : edge_se2_segment2d_line.cpp.i
 
 edge_se2_segment2d_line.s: edge_se2_segment2d_line.cpp.s
@@ -301,7 +290,7 @@ edge_se2_segment2d_line.s: edge_se2_segment2d_line.cpp.s
 
 # target to generate assembly for a file
 edge_se2_segment2d_line.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_line.cpp.s
 .PHONY : edge_se2_segment2d_line.cpp.s
 
 edge_se2_segment2d_pointLine.o: edge_se2_segment2d_pointLine.cpp.o
@@ -310,7 +299,7 @@ edge_se2_segment2d_pointLine.o: edge_se2_segment2d_pointLine.cpp.o
 
 # target to build an object file
 edge_se2_segment2d_pointLine.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.o
 .PHONY : edge_se2_segment2d_pointLine.cpp.o
 
 edge_se2_segment2d_pointLine.i: edge_se2_segment2d_pointLine.cpp.i
@@ -319,7 +308,7 @@ edge_se2_segment2d_pointLine.i: edge_se2_segment2d_pointLine.cpp.i
 
 # target to preprocess a source file
 edge_se2_segment2d_pointLine.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.i
 .PHONY : edge_se2_segment2d_pointLine.cpp.i
 
 edge_se2_segment2d_pointLine.s: edge_se2_segment2d_pointLine.cpp.s
@@ -328,7 +317,7 @@ edge_se2_segment2d_pointLine.s: edge_se2_segment2d_pointLine.cpp.s
 
 # target to generate assembly for a file
 edge_se2_segment2d_pointLine.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/edge_se2_segment2d_pointLine.cpp.s
 .PHONY : edge_se2_segment2d_pointLine.cpp.s
 
 types_slam2d_addons.o: types_slam2d_addons.cpp.o
@@ -337,7 +326,7 @@ types_slam2d_addons.o: types_slam2d_addons.cpp.o
 
 # target to build an object file
 types_slam2d_addons.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.o
 .PHONY : types_slam2d_addons.cpp.o
 
 types_slam2d_addons.i: types_slam2d_addons.cpp.i
@@ -346,7 +335,7 @@ types_slam2d_addons.i: types_slam2d_addons.cpp.i
 
 # target to preprocess a source file
 types_slam2d_addons.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.i
 .PHONY : types_slam2d_addons.cpp.i
 
 types_slam2d_addons.s: types_slam2d_addons.cpp.s
@@ -355,7 +344,7 @@ types_slam2d_addons.s: types_slam2d_addons.cpp.s
 
 # target to generate assembly for a file
 types_slam2d_addons.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/types_slam2d_addons.cpp.s
 .PHONY : types_slam2d_addons.cpp.s
 
 vertex_line2d.o: vertex_line2d.cpp.o
@@ -364,7 +353,7 @@ vertex_line2d.o: vertex_line2d.cpp.o
 
 # target to build an object file
 vertex_line2d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.o
 .PHONY : vertex_line2d.cpp.o
 
 vertex_line2d.i: vertex_line2d.cpp.i
@@ -373,7 +362,7 @@ vertex_line2d.i: vertex_line2d.cpp.i
 
 # target to preprocess a source file
 vertex_line2d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.i
 .PHONY : vertex_line2d.cpp.i
 
 vertex_line2d.s: vertex_line2d.cpp.s
@@ -382,7 +371,7 @@ vertex_line2d.s: vertex_line2d.cpp.s
 
 # target to generate assembly for a file
 vertex_line2d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_line2d.cpp.s
 .PHONY : vertex_line2d.cpp.s
 
 vertex_segment2d.o: vertex_segment2d.cpp.o
@@ -391,7 +380,7 @@ vertex_segment2d.o: vertex_segment2d.cpp.o
 
 # target to build an object file
 vertex_segment2d.cpp.o:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.o
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.o
 .PHONY : vertex_segment2d.cpp.o
 
 vertex_segment2d.i: vertex_segment2d.cpp.i
@@ -400,7 +389,7 @@ vertex_segment2d.i: vertex_segment2d.cpp.i
 
 # target to preprocess a source file
 vertex_segment2d.cpp.i:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.i
 .PHONY : vertex_segment2d.cpp.i
 
 vertex_segment2d.s: vertex_segment2d.cpp.s
@@ -409,7 +398,7 @@ vertex_segment2d.s: vertex_segment2d.cpp.s
 
 # target to generate assembly for a file
 vertex_segment2d.cpp.s:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(MAKE) -f g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/build.make g2o/types/slam2d_addons/CMakeFiles/types_slam2d_addons.dir/vertex_segment2d.cpp.s
 .PHONY : vertex_segment2d.cpp.s
 
 # Help Target
@@ -420,11 +409,10 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
 	@echo "... types_slam2d_addons"
 	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... rebuild_cache"
 	@echo "... edge_line2d.o"
 	@echo "... edge_line2d.i"
 	@echo "... edge_line2d.s"
@@ -463,6 +451,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

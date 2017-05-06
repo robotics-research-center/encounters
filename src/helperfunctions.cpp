@@ -26,6 +26,8 @@
 #include <g2o/solvers/csparse/linear_solver_csparse.h>
 #include <unistd.h>
 #include <gtsam/nonlinear/ISAM2.h>
+#include <gtsam/geometry/Pose3.h>
+#include <gtsam/slam/dataset.h>
 #include "g2o/core/factory.h"
 #include "g2o/stuff/command_args.h"
 
@@ -41,6 +43,7 @@ G2O_USE_TYPE_GROUP(slam3d)
 
 writer mywriter;
 comm mythread_comm;
+std::vector<Matrix> Tr_global;
 
 pthread_mutex_t myMutex;
 
@@ -123,9 +126,187 @@ struct for_g2o_thread
   return(void*)obj;
  }
 
+void insertIntoIsam(gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg, int id1){
+ 
+    int obs=id1-1;
+    gtsam::NonlinearFactorGraph loopFactors;
+    gtsam::NonlinearFactor::shared_ptr factor = nfg[obs];
+    gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+        boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(factor);
+    while(observation->key1()!=id1){
+                obs++;
+                factor = nfg[obs];
+                observation = boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(factor);
+    }
+    
+    //should have found where id1 is the first key
+    //assuming dloop is always lagging behind, this is first odometric measurement for id1
+    if(abs( observation->key2() - observation->key1() ) !=1 ){
+        throw runtime_error("out of while loop without finding node for id1's first odometry");
+    }
+    //at obs we have observation.key1 = id1
+    int forwardkey=obs;
+    int backwardkey=obs-1;
+    int nfgsize=nfg.size();
+    
+    
+    
+    for(;backwardkey>=mythread_comm.Nfirstloop+1;backwardkey--){
+        gtsam::NonlinearFactor::shared_ptr factor = nfg[backwardkey];
+        gtsam::Values newVariables;
+        gtsam::NonlinearFactorGraph newFactors;
+        if(gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+            boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(factor))
+        {
+            std::cout<<" casted"<<std::endl;
+            std::cout<<observation->key1()<<" "<<observation->key2()<<std::endl;
+            newFactors.push_back(observation);
+            
+            if(observation->key1()+1== observation->key2()){ 
+              //normal odometric measurement up till first cross loop closure(1 case ignored)
+              cout<<" observation->key1() < observation->key2()"<<endl;
+              if(!isam2.valueExists(observation->key1()) ){                     
+                if(!isam2.valueExists(observation->key2())){
+                    throw runtime_error("Problem! None exist");
+                }
+
+                cout<<"inserting key1"<<endl;
+                gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key2());
+                newVariables.insert(observation->key1(), previousPose * observation->measured().inverse());
+		std::cout<<"BOTH PRINTS FOR COMPARE"<<std::endl;
+		std::cout<<"updating for key1 "<<observation->key1()<<std::endl;
+		std::cout<<"observation key2 "<<observation->key2()<<std::endl;
+		std::cout<<"observation->measured().inverse()*currentPose"<<std::endl;
+		(observation->measured().inverse()*currentPose).print();
+		std::cout<<"currentPose*observation->measured().inverse()"<<std::endl;
+		(currentPose*observation->measured().inverse()).print();
+		std::cout<<"latest key was "<<latestkey<<std::endl;
+	        if(latestkey!=observation->key2()){throw runtime_error("Problem exists with latest key");}
+		currentPose=currentPose*observation->measured().inverse();
+		initialunopt.insert(observation->key1(),currentPose);
+		latestkey=observation->key1();
+		std::cout<<"latest key is now "<<latestkey<<std::endl;
+              }
+            }
+            else {  //loop closure case ( both +5 and real loop closure(when key1>key2) )
+                loopFactors.push_back(factor);
+                continue;
+            }
+                      
+        }
+        cout<<"next line is isamupdate in insertintoisam!!!"<<endl;
+        cout<<newVariables.size()<<endl;
+        cout<<newFactors.size()<<endl;
+        gtsam::ISAM2Result res1 =  isam2.update(newFactors, newVariables,gtsam::FactorIndices(),boost::none,boost::none,boost::none, true);
+        std::cout<< "(backward)variables relinearised= "<<res1.variablesRelinearized<<std::endl;
+        
+    }
+    currentPose=refPose;
+   
+    latestkey=id1;
+    std::cout<<"latest key is now "<<latestkey<<std::endl;
+    std::cout<<"STARTING FORWARD!!"<<std::endl;
+    for(;forwardkey<nfgsize;forwardkey++){
+        gtsam::NonlinearFactor::shared_ptr factor = nfg[forwardkey];
+        gtsam::Values newVariables;
+        gtsam::NonlinearFactorGraph newFactors;
+        if(gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+            boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(factor))
+        {
+                std::cout<<"casted"<<std::endl;
+		std::cout<<observation->key1()<<" "<<observation->key2()<<std::endl;
+                newFactors.push_back(observation);
 
 
-void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, string dir, int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg) {
+                if(observation->key1() <  observation->key2()){ 
+                  //normal odometric measurement  or +5 frame closure
+                  cout<<" observation->key1() < observation->key2()"<<endl;
+                  if(!isam2.valueExists(observation->key2()) ){                     
+                    if(!isam2.valueExists(observation->key1())){
+                        throw runtime_error("Problem! None exist");
+                    }
+                      cout<<" inserting key2"<<endl;
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key1());
+                      newVariables.insert(observation->key2(), previousPose * observation->measured());
+			if(observation->key1() +1== observation->key2()){
+
+				std::cout<<"BOTH PRINTS FOR COMPARE"<<std::endl;
+				std::cout<<"updating for key2 "<<observation->key2()<<std::endl;
+				std::cout<<"observation key1 "<<observation->key1()<<std::endl;
+				std::cout<<"observation->measured()*currentPose"<<std::endl;
+				(observation->measured()*currentPose).print();
+				std::cout<<"currentPose*observation->measured()"<<std::endl;
+				(currentPose*observation->measured()).print();
+				currentPose=currentPose*observation->measured();
+	       			std::cout<<"latest key was "<<latestkey<<std::endl;
+				if(latestkey!=observation->key1()){throw runtime_error("Problem exists with latest key");}
+				initialunopt.insert(observation->key2(),currentPose);
+				latestkey=observation->key2();
+				std::cout<<"latest key is now "<<latestkey<<std::endl;
+			}
+                  }
+                }
+                else {  //loop closure case
+                  cout<<" observation->key1() > observation->key2()"<<endl;
+                  if(!isam2.valueExists(observation->key1()) ){
+                    if(!isam2.valueExists(observation->key2())){
+                        throw runtime_error("Problem! None exist");
+                    }
+                    else{
+                      cout<<" inserting key1"<<endl;
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key2());
+                      newVariables.insert(observation->key1(), previousPose * observation->measured().inverse());
+                    }
+                  }
+                }
+                      
+        }
+        cout<<"next line is isamupdate in insertintoisam!!!"<<endl;
+        cout<<newVariables.size()<<endl;
+        cout<<newFactors.size()<<endl;
+        gtsam::ISAM2Result res1 =  isam2.update(newFactors, newVariables,gtsam::FactorIndices(),boost::none,boost::none,boost::none, true);
+        std::cout<< "(forward)variables relinearised= "<<res1.variablesRelinearized<<std::endl;
+        
+    }
+    
+    
+    //now go over remaining factors
+    int vectorsize=loopFactors.size();
+    for(int y=0;y<vectorsize;y++){
+        gtsam::NonlinearFactorGraph newFactors;
+        gtsam::Values newVariables;
+        gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+                boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(loopFactors[y]);
+        newFactors.push_back(loopFactors[y]);
+        if(!isam2.valueExists(observation->key1()) ){
+                if(!isam2.valueExists(observation->key2()) ){
+                    throw runtime_error("Problem! key2 also doesn't exist, so none exist");
+                }
+                cout<<" inserting key1"<<endl;
+                gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key2());
+                newVariables.insert(observation->key1(), previousPose * observation->measured().inverse());
+        }
+        else if(!isam2.valueExists(observation->key2()) ){
+                cout<<" inserting key2"<<endl;
+                gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key1());
+                newVariables.insert(observation->key2(), previousPose * observation->measured());           
+        }
+        else{
+            std::cout<<"(loopward) BOTH EXIST !!!! "<<std::endl;
+        }
+        
+        cout<<"next line is isamupdate in insertintoisam!!!"<<endl;
+        cout<<newVariables.size()<<endl;
+        cout<<newFactors.size()<<endl;
+        gtsam::ISAM2Result res1 =  isam2.update(newFactors, newVariables,gtsam::FactorIndices(),boost::none,boost::none,boost::none, true);
+        std::cout<< "(loopward) variables relinearised= "<<res1.variablesRelinearized<<std::endl;
+    }
+
+    
+    
+}
+
+void my_libviso2(string dir, int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg) {
 
     while(!mythread_comm.can_start_viso){
         sleep(5);
@@ -155,13 +336,12 @@ void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, 
   mywriter.my_write_file.open("data/offline.g2o");
   string ss;
   
-  mythread_comm.loop_wait = true;
+  mythread_comm.loop_wait = false;
   
   // init visual odometry
   VisualOdometryStereo viso(param);
   
   Matrix pose = Matrix::eye(4);
-  Tr_global.push_back(pose);
   
   Matrix extra_relations;
   bool is_good = false;
@@ -171,27 +351,27 @@ void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, 
   
   for (int32_t i=1; i<=numImg; i++) 
   {  
-  if(i==1){
-      try{
-        //init isam2 with prior
-        gtsam::NonlinearFactorGraph newFactors;
-        gtsam::Values newVariables;
-        gtsam::Vector v(3);
-        v<<0.01, 0.01, 0.01;
-        gtsam::SharedDiagonal priorNoise = gtsam::noiseModel::Diagonal::Sigmas(v);
-        newFactors.push_back(boost::make_shared<gtsam::PriorFactor<gtsam::Pose2> >(numNodes+1, gtsam::Pose2(), gtsam::noiseModel::Unit::Create(gtsam::Pose2::dimension)));
-        newVariables.insert(numNodes+1, gtsam::Pose2());
-        isam2.update(newFactors, newVariables);
-        cout<<"SUCCESSFULLY UPDATED ISAM2 AFTER ADDING NODE WITH PRIOR"<<endl;
-      }
-      catch(Exception e){
-        std::cout << e.err << '\n'; 
-        std::cout << e.line << '\n'; 
-        std::cout << e.what() << '\n';
-        cerr << "(libviso)ERROR: Couldn't add first pose prior!" << endl;
-        //break;
-        } 
-      }
+//  if(i==1){
+//      try{
+//        //init isam2 with prior
+//        gtsam::NonlinearFactorGraph newFactors;
+//        gtsam::Values newVariables;
+//        gtsam::Vector v(3);
+//        v<<0.01, 0.01, 0.01;
+//        gtsam::SharedDiagonal priorNoise = gtsam::noiseModel::Diagonal::Sigmas(v);
+//        newFactors.push_back(boost::make_shared<gtsam::PriorFactor<gtsam::Pose3> >(numNodes+1, gtsam::Pose3(-14.7,-16.7,-1.3), gtsam::noiseModel::Unit::Create(gtsam::Pose3::dimension)));
+//        newVariables.insert(numNodes+1, gtsam::Pose3(-14.7,-16.7,-1.3));
+//        isam2.update(newFactors, newVariables);
+//        cout<<"SUCCESSFULLY UPDATED ISAM2 AFTER ADDING NODE WITH PRIOR"<<endl;
+//      }
+//      catch(Exception e){
+//        std::cout << e.err << '\n'; 
+//        std::cout << e.line << '\n'; 
+//        std::cout << e.what() << '\n';
+//        cerr << "(libviso)ERROR: Couldn't add first pose prior!" << endl;
+//        //break;
+//        } 
+//      }
  
   pthread_mutex_lock(&myMutex);
   mythread_comm.viso_wait_flag = true;
@@ -241,26 +421,32 @@ void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, 
     
       viso.process(left_img_data,right_img_data,dims);
       // on success, update current pose
-        cout<<"(libviso) viso.process done"<<endl;
+      //cout<<"(libviso) viso.process done"<<endl;
       //Tr_local.push_back(Matrix::inv(viso.getMotion()));
       
       
       if(i%10==0) //try without this also
       {
+        while(mythread_comm.in_dloop_g2oedge){std::cout<<"waiting on dloop"<<std::endl;}
         pthread_mutex_lock(&myMutex);
         cout<<"(libviso) going into struct g2o, relin yes"<<endl;
         std::string pref="////relin-ing (struct g2o) regular pose ////";
+        mythread_comm.in_viso_g2oedge=true;
         ss = my_for_g2o_edge(numNodes+i,numNodes+i+1,Matrix::inv(viso.getMotion()),isam2,true,nfg,pref);
+        mythread_comm.in_viso_g2oedge=false;
         pthread_mutex_unlock(&myMutex);
-        cout<<"(libviso)updated isam through struct g2o edge- relin"<<endl;
+        //cout<<"(libviso)updated isam through struct g2o edge- relin"<<endl;
       }
       else{
-          pthread_mutex_lock(&myMutex);
-         cout<<"(libviso) going into struct g2o, relin no"<<endl;
-                 std::string pref="////non relin (struct g2o) regular pose /// ";
-        ss = my_for_g2o_edge(numNodes+i,numNodes+i+1,Matrix::inv(viso.getMotion()),isam2,false,nfg,pref); 
-          pthread_mutex_unlock(&myMutex);
-          cout<<"(libviso)updated isam through struct g2o edge-non relin"<<endl;
+        cout<<"(libviso) going into struct g2o, relin no"<<endl;
+        std::string pref="////non relin (struct g2o) regular pose /// ";
+        while(mythread_comm.in_dloop_g2oedge){std::cout<<"waiting on dloop"<<std::endl;}
+        pthread_mutex_lock(&myMutex);
+        mythread_comm.in_viso_g2oedge=true;
+        ss = my_for_g2o_edge(numNodes+i,numNodes+i+1,Matrix::inv(viso.getMotion()),isam2,false,nfg,pref);
+        mythread_comm.in_viso_g2oedge=false;
+        pthread_mutex_unlock(&myMutex);
+        //cout<<"(libviso)updated isam through struct g2o edge-non relin"<<endl;
       }
       mywriter.my_write_file << ss;
       mywriter.g2o_string = mywriter.g2o_string + ss;
@@ -274,9 +460,12 @@ void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, 
         cout<<"completed call of libviso relative extra relations function"<<std::endl;
           if(is_good)
           {
-            pthread_mutex_lock(&myMutex);
             std::string pref="//// relin-ing (struct g2o) frame+5 case ///";
+            while(mythread_comm.in_dloop_g2oedge){std::cout<<"waiting on dloop"<<std::endl;}
+            pthread_mutex_lock(&myMutex);
+            mythread_comm.in_viso_g2oedge=true;
             ss = my_for_g2o_edge(numNodes+i,numNodes+i+5,extra_relations,isam2,true,nfg,pref);
+            mythread_comm.in_viso_g2oedge=false;
             pthread_mutex_unlock(&myMutex);
 
             mywriter.my_write_file << ss;
@@ -290,7 +479,7 @@ void my_libviso2(std::vector<Matrix> &Tr_local, std::vector<Matrix> &Tr_global, 
       if(i>1)
       {
         pose = pose * Matrix::inv(viso.getMotion());
-       // Tr_global.push_back(pose);  
+        Tr_global.push_back(pose);  
       }
       
 
@@ -356,14 +545,6 @@ g2o_file.close();
 mywriter.my_write_file << "\nFIX 1 \n";
 mywriter.my_write_file.close();
 
-const string outputfile="isam.g2o";
-const string outputfile2="isamnfg.g2o";
-const string outputfile3="nfg.g2o";
-gtsam::Values estimate(isam2.calculateEstimate());
-gtsam::NonlinearFactorGraph datasetempty;
-gtsam::writeG2o(datasetempty,estimate,outputfile);
-gtsam::writeG2o(nfg,gtsam::Values(),outputfile3);
-gtsam::writeG2o(nfg,estimate,outputfile2);
 
 }
 
@@ -391,6 +572,7 @@ bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string 
   
   // init visual odometry
   VisualOdometryStereo viso(param);
+  VisualOdometryStereo viso2(param);
   
   // current pose (this matrix transforms a point from the current
 
@@ -398,21 +580,23 @@ bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string 
    // Tr_relative r;
     string left_img_file_name;
     string right_img_file_name;
+    uint8_t *left_img_data1;
+    uint8_t *right_img_data1;
 
     for (int j = 1; j < 3; j++)
     {
       if (j==1)
       {
         char base_name[256]; sprintf(base_name,"%04d.jpg",index1);
-        left_img_file_name  = dir_second + "left/" + base_name;
-        right_img_file_name = dir_second + "right/" + base_name;
+        left_img_file_name  = dir + "left/" + base_name;
+        right_img_file_name = dir + "right/" + base_name;
        // r.frame1 = index1;
       }
       else
       {
         char base_name[256]; sprintf(base_name,"%04d.jpg",index2);
-        left_img_file_name  = dir + "left/" + base_name;
-        right_img_file_name = dir + "right/" + base_name; 
+        left_img_file_name  = dir_second + "left/" + base_name;
+        right_img_file_name = dir_second + "right/" + base_name; 
        // r.frame2 = index2;
       }
           cout << "///////////will start Processing: Frames: " << index1 <<"  "<< index2<< endl;
@@ -440,6 +624,7 @@ bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string 
       // convert input images to uint8_t buffer
       uint8_t* left_img_data  = (uint8_t*)malloc(width*height*sizeof(uint8_t));
       uint8_t* right_img_data = (uint8_t*)malloc(width*height*sizeof(uint8_t));
+          
       int32_t k=0;
         for (int32_t row=0; row < left_img.rows; row++) {
           for (int32_t col=0; col < left_img.cols; col++) {
@@ -450,6 +635,20 @@ bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string 
             k++;
           }
         }
+      if(j==1){
+        left_img_data1  = (uint8_t*)malloc(width*height*sizeof(uint8_t));
+        right_img_data1 = (uint8_t*)malloc(width*height*sizeof(uint8_t));
+        k=0;
+        for (int32_t row=0; row < left_img.rows; row++) {
+          for (int32_t col=0; col < left_img.cols; col++) {
+          // left_img_data[k]  = left_img.get_pixel(u,v);
+          // right_img_data[k] = right_img.get_pixel(u,v);
+            left_img_data1[k]  = left_img.at<uchar>(row,col);
+            right_img_data1[k] = right_img.at<uchar>(row,col);
+            k++;
+          }
+        }
+      }
 
       // status
         cout << "(libviso relative)Processing: Frame between: " << index1 << '\t' << index2 << endl;
@@ -458,30 +657,70 @@ bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string 
         int32_t dims[] = {width,height,width};
       
       
-        viso.process(left_img_data,right_img_data,dims);
+        if(viso.process(left_img_data,right_img_data,dims)){
+            std::cout<<" VISO PROCESS PASSED, J = "<<j<<std::endl;
+        }
+        else{
+            std::cout<<" VISO PROCESS FAILED, J = "<<j<<std::endl;
+            if(j==2){
+                  free(left_img_data);
+                  free(right_img_data);
+                  free(left_img_data1);
+                  free(right_img_data1);
+              return false;
+            }
+        }
+        if(j==2){
+         viso2.process(left_img_data,right_img_data,dims);
+        }
         // on success, update current pose
 
         // output some statistics
+        //std::cout<<"J = "<<j<<std::endl;
+        if(j==2){
+            double num_matches = viso.getNumberOfMatches();
+            double num_inliers = viso.getNumberOfInliers();
+            double inliers_percent = 100.0*num_inliers/num_matches;
 
-        double num_matches = viso.getNumberOfMatches();
-        double num_inliers = viso.getNumberOfInliers();
-        double inliers_percent = 100.0*num_inliers/num_matches;
-        // cout << ", Matches: " << num_matches;
-        // cout << ", Inliers: " << inliers_percent << " %" << ", Current pose: " << endl;
-        // cout << pose << endl << endl;
 
-         if(j>1 && inliers_percent>35)
-        {
-          pose = pose * Matrix::inv(viso.getMotion());
-          //r.transform = pose;
-          Tr_final = pose;  
-          
-          free(left_img_data);
-          free(right_img_data);
+            if(viso2.process(left_img_data1,right_img_data1,dims)){
+                    std::cout<<" SECOND VISO2 PROCESS PASSED, J = "<<j<<std::endl;
+            }        
+            else{
+                    std::cout<<" SECOND VISO2 PROCESS FAILED, J = "<<j<<std::endl;
+                    free(left_img_data);
+                  free(right_img_data);
+                  free(left_img_data1);
+                  free(right_img_data1);
+              return false;
+            }
 
-          return true;
-          //cout << "i: " << i << '\t' << "j: " << j <<endl << endl;
+
+            double num_matches2 = viso2.getNumberOfMatches();
+            double num_inliers2 = viso2.getNumberOfInliers();
+            double inliers_percent2 = 100.0*num_inliers2/num_matches2;
+
+            cout << ", Matches: " << num_matches;
+            cout << ", Inliers: " << inliers_percent << " %"<< endl;
+
+            cout << ", Matches2: " << num_matches2;
+            cout << ", Inliers2: " << inliers_percent2 << " %"<< endl;   
+            if(min(inliers_percent,inliers_percent2)>35)
+            {
+              pose = pose * Matrix::inv(viso.getMotion());
+              std::cout<<"pose "<<pose<<std::endl;
+              Tr_final = pose;  
+
+              free(left_img_data);
+              free(right_img_data);
+              free(left_img_data1);
+              free(right_img_data1);
+              return true;
+              //cout << "i: " << i << '\t' << "j: " << j <<endl << endl;
+            }
         }
+
+
 
       // release uint8_t buffers
       free(left_img_data);
@@ -635,95 +874,231 @@ string my_for_g2o_edge(int id1, int id2, Matrix transform, gtsam::ISAM2 &isam2,b
   std::cout<<prefix<<" struct g2o function entered"<<std::endl;
   stringstream out;
 
-  Matrix aboutX = Matrix::rotMatX(-PI,4);
   Matrix new_tr;
 
-  new_tr = aboutX*transform;
-  
+  new_tr = transform;
+  std::cout<<"transform is "<<std::endl;
+  std::cout<<transform<<std::endl;
   double dx = new_tr.getData(0,3);
+  double dy = new_tr.getData(1,3);
   double dz = new_tr.getData(2,3);
-  double thetay = atan2(-new_tr.getData(2,0), sqrt(new_tr.getData(2,1)*new_tr.getData(2,1) + new_tr.getData(2,2)*new_tr.getData(2,2)));
 
-  if(id2>727){
-  out << "EDGE_SE2 " << id1 <<' '<< id2 <<' '<< -dz <<' '<< -dx <<' '<< thetay <<' '<< "0.01 0 0 0.01 0 0.01" << endl;
+  double thetay = atan2(new_tr.getData(0,2), sqrt(new_tr.getData(0,0)*new_tr.getData(0,0) + new_tr.getData(0,1)*new_tr.getData(0,1)));
+
+  double thetax = atan2(-new_tr.getData(1,2), new_tr.getData(2,2));
+
+  double thetaz = atan2(-new_tr.getData(0,1), new_tr.getData(0,0));
+
+  double thetay0 = atan2(-new_tr.getData(2,0), sqrt(new_tr.getData(2,1)*new_tr.getData(2,1) + new_tr.getData(2,2)*new_tr.getData(2,2)));
+
+  double thetax0 = atan2(new_tr.getData(2,1), new_tr.getData(2,2));
+
+  double thetaz0 = atan2(new_tr.getData(1,0), new_tr.getData(0,0));
+
+
+  if(id2>mythread_comm.Nfirstloop+1){
+  out << "EDGE3 " << id1 <<' '<< id2 <<' '<< dx << ' '<< dy <<' '<< dz <<' '<< thetax << ' ' << thetay <<' '<< thetaz<<" "<< "1000 0 0 0 0 0 1000 0 0 0 0 1000 0 0 0 1000 0 0 1000 0 1000" << endl;
   }
-  
-  gtsam::Matrix M(3, 3);
-  M<<0.00001,0,0,0,0.00001,0,0,0,0.00001;
+  std::cout<<"dx dy dz thetax thetay thetaz : "<<dx<<"  "<<dy<<" "<<dz<<"  "<<thetax<<"  "<<thetay<<" "<<thetaz<<std::endl;
+
+  std::cout<<"old thetax thetay thetaz (ZYX) : "<<thetax0<<" "<<thetay0<<" "<<thetaz0<<std::endl;
+  std::cout<<"new thetax thetay thetaz (XYZ): "<<thetax<<" "<<thetay<<" "<<thetaz<<std::endl;
+
+  gtsam::Matrix M(6, 6);
+  M<<0.00001,0,0,0,0,0,0,0.00001,0,0,0,0,0,0,0.00001,0,0,0,0,0,0,0.00001,0,0,0,0,0,0,0.00001,0,0,0,0,0,0,0.00001;
   gtsam::SharedNoiseModel model;
   model = gtsam::noiseModel::Gaussian::Information(M, true);
+  gtsam::Rot3 rot1(new_tr.getData(0,0),new_tr.getData(0,1),new_tr.getData(0,2),new_tr.getData(1,0),new_tr.getData(1,1),new_tr.getData(1,2),new_tr.getData(2,0),new_tr.getData(2,1),new_tr.getData(2,2));
+  gtsam::Rot3 rot2 = gtsam::Rot3::RzRyRx(thetax,thetay,thetaz);
+  gtsam::Rot3 rot3 = gtsam::Rot3::RzRyRx(thetax0,thetay0,thetaz0);
+  std::cout<<"RZRYRX WITH NEW THETA"<<std::endl;
+  rot2.print();
+  std::cout<<"RZRYRX WITH OLD THETA"<<std::endl;
+  rot3.print();
+  std::cout<<"rotation matrix from rotation matrix (being used)"<<std::endl;
+  rot1.print();
   
-      gtsam::Values newVariables;
-      gtsam::NonlinearFactorGraph newFactors;
-      gtsam::Pose2 l1Xl2(-dz, -dx, thetay);
-      
+  gtsam::Point3 point(dx,dy,dz);
+  gtsam::Pose3 l1Xl2(rot1,point);
+
       gtsam::NonlinearFactor::shared_ptr factor(
-          new gtsam::BetweenFactor<gtsam::Pose2>(id1, id2, l1Xl2, model));
+          new gtsam::BetweenFactor<gtsam::Pose3>(id1, id2, l1Xl2, model));
       factor->print(prefix);
       nfg.push_back(factor);
-        if(gtsam::BetweenFactor<gtsam::Pose2>::shared_ptr observation = 
-            boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose2> >(factor))
+
+
+	if(mythread_comm.first_loop_just_found)
+	{
+            //call insert into isam 
+            if(id1>mythread_comm.Nfirstloop+1 && id2<=mythread_comm.Nfirstloop+1){
+                mythread_comm.inserting_into_isam=true;
+                
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<   ADDING PRIOR     <<<<<<<<<<<<<"<<std::endl;
+                l1Xl2.print();
+                std::cout<<std::endl;
+                std::cout<<"<<<<<<<<<<<   ADDED PRIOR     <<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+
+        //adding prior
+        gtsam::NonlinearFactorGraph newFactors;
+        gtsam::Values newVariables;
+        //gtsam::Vector v(3);
+        //v<<0.01, 0.01, 0.01;
+        //gtsam::SharedDiagonal priorNoise = gtsam::noiseModel::Diagonal::Sigmas(v);
+        std::cout<<"calculated index into tr_global is "<<id1-mythread_comm.Nfirstloop-4<<std::endl;
+        //Matrix estimatesecondLoop = Tr_global[id1-mythread_comm.Nfirstloop-4]; //?
+
+        //double dx2 = estimatesecondLoop.getData(0,3);
+        //double dz2 = estimatesecondLoop.getData(2,3);
+        //double thetay2 = atan2(-estimatesecondLoop.getData(2,0), sqrt(estimatesecondLoop.getData(2,1)*estimatesecondLoop.getData(2,1) + estimatesecondLoop.getData(2,2)*estimatesecondLoop.getData(2,2))); //remove minus here?
+        
+        //std::cout<<"tr_global dz dy thety : "<<dz2<<"  "<<dx2<<"  "<<thetay2<<std::endl;
+        
+        //gtsam::Pose3 secondLoopLocation(dz2,dx2,thetay2);//minus?
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                //std::cout<<"secondLoopLocation BEING ADDED IS: "<<std::endl;
+                //secondLoopLocation.print();
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+        gtsam::Pose3 firstLoopLocation = initial.at<gtsam::Pose3>(id2);
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"firstLoopLocation BEING ADDED IS: "<<std::endl;
+                firstLoopLocation.print();
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+        //gtsam::Pose3 betweenPose((firstLoopLocation.x()-l1Xl2.x()),(firstLoopLocation.y()-l1Xl2.y()),(firstLoopLocation.theta()-l1Xl2.theta()));
+	gtsam::Pose3 betweenPose( l1Xl2.inverse()*firstLoopLocation );
+        refPose=betweenPose;
+	currentPose=refPose;
+	std::cout<<"latest key was "<<latestkey<<std::endl;
+        latestkey=id1;
+	std::cout<<"latest key is now "<<latestkey<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"betweenPose BEING ADDED IS: "<<std::endl;
+		betweenPose.print();
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+                std::cout<<"<<<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+        newFactors.push_back(boost::make_shared<gtsam::PriorFactor<gtsam::Pose3> >(id1, betweenPose, gtsam::noiseModel::Unit::Create(gtsam::Pose3::dimension)));
+        newVariables.insert(id1,betweenPose);
+        initialunopt.insert(id1,refPose);
+        
+        gtsam::ISAM2Result res1 =  isam2.update(newFactors, newVariables,gtsam::FactorIndices(),boost::none,boost::none,boost::none, true);
+        std::cout<< "variables relinearised = "<<res1.variablesRelinearized<<std::endl;
+        
+                insertIntoIsam(isam2,nfg,id1);
+                mythread_comm.first_loop_just_found=false;  
+                mythread_comm.inserting_into_isam=true;
+                mythread_comm.normal_postloop_flow=true;
+            }
+            else{
+                throw runtime_error("first loop closure conditions not met");
+            }
+            return out.str();
+	}
+
+      if(mythread_comm.normal_postloop_flow){
+          
+        gtsam::Values newVariables;
+        gtsam::NonlinearFactorGraph newFactors;
+        if(gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+            boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(factor))
         {
-                std::cout<<prefix<<" casted"<<std::endl;
+                std::cout<<" casted"<<std::endl;
                 newFactors.push_back(observation);
                 if(observation->key1() > observation->key2()){
-                  cout<<prefix<<" observation->key1() > observation->key2()"<<endl;
+                  cout<<" observation->key1() > observation->key2()"<<endl;
                   if(!isam2.valueExists(observation->key1()) ){                     
                     if(!isam2.valueExists(observation->key2())){
                         throw runtime_error("Problem! None exist");
                     }
                     if(id1 == 1){
-                      cout<<prefix<<" inserting at id1=1"<<endl;
+                      cout<<" inserting at id1=1"<<endl;
                       newVariables.insert(observation->key1(), observation->measured().inverse());
-                      cout<<prefix<<" inserted at id1=1"<<endl;
+                      cout<<" inserted at id1=1"<<endl;
                     }
                     else{
-                      cout<<prefix<<" inserting key1"<<endl;
-                      gtsam::Pose2 previousPose = isam2.calculateEstimate<gtsam::Pose2>(observation->key2());
+                      cout<<" inserting key1"<<endl;
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key2());
                       newVariables.insert(observation->key1(), previousPose * observation->measured().inverse());
                     }
                   }
                 }
                 else {  //+5 frame constraint case
-                  cout<<prefix<<" observation->key1() < observation->key2()"<<endl;
+                  cout<<" observation->key1() < observation->key2()"<<endl;
                   if(!isam2.valueExists(observation->key2()) ){
                     if(!isam2.valueExists(observation->key1())){
                         throw runtime_error("Problem! None exist");
                     }
                     if (id1 == 1){
-                      cout<<prefix<<" inserted at id1=1"<<endl;
+                      cout<<" inserted at id1=1"<<endl;
                       newVariables.insert(observation->key2(), observation->measured());
-                      cout<<prefix<<" inserted at id1=1"<<endl;
+                      cout<<" inserted at id1=1"<<endl;
                     }
                     else{
-                      cout<<prefix<<" inserting key2"<<endl;
-                      gtsam::Pose2 previousPose = isam2.calculateEstimate<gtsam::Pose2>(observation->key1());
+                      cout<<" inserting key2"<<endl;
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key1());
                       newVariables.insert(observation->key2(), previousPose * observation->measured());
                     }
+                  }
+                  if(!initialunopt.exists(observation->key2())){
+                      	if(observation->key1() +1== observation->key2()){
+				std::cout<<"BOTH PRINTS FOR COMPARE"<<std::endl;
+
+				std::cout<<"updating for key2 "<<observation->key2()<<std::endl;
+				std::cout<<"observation key1 "<<observation->key1()<<std::endl;
+				std::cout<<"observation->measured()*currentPose"<<std::endl;
+				(observation->measured()*currentPose).print();
+				std::cout<<"currentPose*observation->measured()"<<std::endl;
+				(currentPose*observation->measured()).print();
+				std::cout<<"latest key was "<<latestkey<<std::endl;
+				if(latestkey!=observation->key1()){throw runtime_error("Problem exists with latest key");}
+				currentPose=currentPose*observation->measured();
+				initialunopt.insert(observation->key2(),currentPose);
+				latestkey=observation->key2();
+				std::cout<<"latest key is now "<<latestkey<<std::endl;
+			}
                   }
                 }
                       
         }
       //gtsam::Values estimate(isam2.calculateEstimate());
       //estimate.print("");
-        cout<<prefix<<"going to call isamupdate in struct g2o function"<<endl;
+        cout<<"going to call isamupdate in struct g2o function"<<endl;
 	if(relin){
-            std::cout<<prefix<<"ASKED TO RELIN"<<std::endl;
+            std::cout<<"ASKED TO RELIN"<<std::endl;
         gtsam::ISAM2Result res1 =  isam2.update(newFactors, newVariables,gtsam::FactorIndices(),boost::none,boost::none,boost::none, true);
-        std::cout<<prefix<< "variables relinearised (non zero)= "<<res1.variablesRelinearized<<std::endl;
+        std::cout<< "variables relinearised (non zero)= "<<res1.variablesRelinearized<<std::endl;
 //            if(res1.variablesRelinearized>200)
 //            {
 //                 //write a file to visualise later
 //            }
 	}
 	else{
-            cout<<prefix<<"next line is isamupdate"<<endl;
-            cout<<prefix<<newVariables.size()<<endl;
-            cout<<prefix<<newFactors.size()<<endl;
+            cout<<"next line is isamupdate"<<endl;
+            cout<<newVariables.size()<<endl;
+            cout<<newFactors.size()<<endl;
 	gtsam::ISAM2Result res1 = isam2.update(newFactors,newVariables);
-        std::cout<<prefix<< "variables relinearised (should be zero)= "<<res1.variablesRelinearized<<std::endl;
+        std::cout<< "variables relinearised (should be zero)= "<<res1.variablesRelinearized<<std::endl;
 	}
 
-      std::cout<<prefix<<"end of struct g2o edge function"<<std::endl;
-  return out.str();
+       
+    
+        std::cout<<"end of struct g2o edge function"<<std::endl;
+      
+      }
+//      else{
+//        throw runtime_error("in the unexpected else case of struct g2o edge");
+//      }
+   return out.str();
+
 }

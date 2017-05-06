@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.c
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.c
 os_specific.h
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.h
 
-/home/gunshi/Downloads/MultiRobot/slam/cair/g2o/stuff/os_specific.h
+/home/gunshi/Downloads/MultiRobot/3dmerge/g2o/stuff/os_specific.h
 stdio.h
 -
 stdlib.h

@@ -34,14 +34,18 @@ using namespace cv;
 #define PI 3.14159265
 
 // Directory of Images
-string IMG_DIR = "/home/gunshi/Downloads/oct11_dusshera/loop2/";
+string IMG_DIR = "/home/gunshi/Downloads/oct11_dusshera/loop3/";
 static const string image_dir_firstloop="/home/gunshi/Downloads/oct11_dusshera/loop1/";
 // DLoop resources
 static const string VOC_FILE = "./resources/huskymerge_voc.voc.gz";
 //static const string IMAGE_DIR = IMG_DIR1 + "left/";
 static const int IMAGE_W = 640; // image size
 static const int IMAGE_H = 480;
-
+gtsam::Values initial;
+gtsam::Values initialunopt;
+gtsam::Pose3 refPose; 
+gtsam::Pose3 currentPose; 
+int latestkey=0;
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2);
 void my_dloop(std::vector<Matrix> &m,std::vector<int> &index1, std::vector<int> &index2,string file, string img_dir, int a, int b, gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg, string image_dir_firstloop);
@@ -62,8 +66,6 @@ public:
 // Struct for passing variables to viso thread
 struct for_libviso_thread
 {
-  std::vector<Matrix> Tr_local;
-  std::vector<Matrix> Tr_global;
   int numimages;
   string imgdir;
   gtsam::ISAM2 *isam2;
@@ -87,7 +89,7 @@ struct for_dloop_thread
     for_libviso_thread* obj = (for_libviso_thread *) t;
 
     // Calling libviso function
-    my_libviso2(obj->Tr_local,obj->Tr_global,obj->imgdir,obj->numimages,*(obj->isam2),*(obj->nfg));
+    my_libviso2(obj->imgdir,obj->numimages,*(obj->isam2),*(obj->nfg));
     
     cout << "exiting libviso thread!!" << endl;
     return (void *)obj;
@@ -109,22 +111,28 @@ struct for_dloop_thread
 // For single loop
 int main()
 {
- 
     gtsam::ISAM2Params params;
     params.optimizationParams = gtsam::ISAM2DoglegParams();
     params.relinearizeSkip = 10;
     params.enablePartialRelinearizationCheck = true;
     gtsam::ISAM2 isam2(params);
     gtsam::NonlinearFactorGraph nfg;
-    string g2ofilename = "/home/gunshi/NetBeansProjects/gtsam-only/optimisedloop.g2o";
-    std::pair<gtsam::NonlinearFactorGraph::shared_ptr, gtsam::Values::shared_ptr> data = gtsam::readG2o(g2ofilename,false);
+    string g2ofilename = "3doptimisedloop1.g2o";
+    std::pair<gtsam::NonlinearFactorGraph::shared_ptr, gtsam::Values::shared_ptr> data = gtsam::load3D(g2ofilename);
+    //initial=*(data.second);
+    //initial.print();
     nfg = *(data.first);
     std::cout<<"dataset size "<<nfg.size()<<std::endl;
     loadLoop(nfg,isam2);
-    gtsam::Values estimate(isam2.calculateBestEstimate());
-    std::cout<<"error "<<nfg.error(*(data.second))<<std::endl;
-    std::cout<<"error "<<nfg.error(estimate)<<std::endl;
-    gtsam::writeG2o(nfg,estimate,"doubleopt.g2o");
+std::cout<<"load loop over"<<std::endl;
+std::cout<<isam2.size()<<std::endl;
+    //gtsam::Values estimate(isam2.calculateEstimate());
+    initial=isam2.calculateBestEstimate();
+    initial.print();
+    initialunopt.insert(initial);
+    //std::cout<<"error "<<nfg.error(*(data.second))<<std::endl;
+    //std::cout<<"error "<<nfg.error(estimate)<<std::endl;
+
 
     
     
@@ -161,6 +169,16 @@ int main()
   pthread_join(thread[0],NULL);
   pthread_join(thread[1],NULL);
 
+  const string outputfile="isam.g2o";
+  const string outputfile2="isamnfg.g2o";
+  const string outputfile3="nfg.g2o";
+  const string outputfile4="unopt-batch.g2o";
+    gtsam::Values estimate2(isam2.calculateEstimate());
+    gtsam::NonlinearFactorGraph datasetempty;
+    gtsam::writeG2o(datasetempty,estimate2,outputfile);
+    gtsam::writeG2o(nfg,gtsam::Values(),outputfile3);
+    gtsam::writeG2o(nfg,estimate2,outputfile2);
+    gtsam::writeG2o(nfg,initialunopt,outputfile4);
   cout << "done" << endl;
 
   return 0;
@@ -181,8 +199,8 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
   // As long as there is an observation to be added to the ISAM problem
   while(nextObs < dataset.size()){
 
-    if(gtsam::BetweenFactor<gtsam::Pose2>::shared_ptr observation = 
-      boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose2> >(dataset[nextObs])){
+    if(gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+      boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3> >(dataset[nextObs])){
       
       // Get the keys from the observation
       gtsam::Key key1 = observation->key1();
@@ -217,11 +235,11 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
 
     gtsam::NonlinearFactorGraph newFactors;
     gtsam::Values newVariables;
-    gtsam::Vector v(3);
-    v<<0.01, 0.01, 0.01;
-    gtsam::SharedDiagonal priorNoise = gtsam::noiseModel::Diagonal::Sigmas(v);
-    newFactors.push_back(boost::make_shared<gtsam::PriorFactor<gtsam::Pose2>>(firstPose, gtsam::Pose2(), gtsam::noiseModel::Unit::Create(gtsam::Pose2::dimension)));
-    newVariables.insert(firstPose, gtsam::Pose2());
+    //gtsam::Vector v(3);
+    //v<<0.01, 0.01, 0.01;
+    //gtsam::SharedDiagonal priorNoise = gtsam::noiseModel::Diagonal::Sigmas(v);
+    newFactors.push_back(boost::make_shared<gtsam::PriorFactor<gtsam::Pose3>>(firstPose, gtsam::Pose3(), gtsam::noiseModel::Unit::Create(gtsam::Pose3::dimension)));
+    newVariables.insert(firstPose, gtsam::Pose3());
     // Update the ISAM2 problem
     gtsam::ISAM2Result res =  isam2.update(newFactors, newVariables);
     std::cout<<"first factor update "<<std::endl;  
@@ -230,8 +248,8 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
   int dsSize=dataset.size();
   for(int d=nextObs;d<dsSize;d++){
          gtsam::NonlinearFactor::shared_ptr obsFactor = dataset[d];
-      if(gtsam::BetweenFactor<gtsam::Pose2>::shared_ptr observation = 
-        boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose2>>(obsFactor)){
+      if(gtsam::BetweenFactor<gtsam::Pose3>::shared_ptr observation = 
+        boost::dynamic_pointer_cast<gtsam::BetweenFactor<gtsam::Pose3>>(obsFactor)){
           std::cout<<"obs1 obs2    "<<observation->key1()<<"  "<<observation->key2()<<std::endl;
                 gtsam::Values newVariables;
                 gtsam::NonlinearFactorGraph newFactors;
@@ -246,7 +264,7 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
                       newVariables.insert(observation->key1(), observation->measured().inverse());
                     }
                     else{
-                      gtsam::Pose2 previousPose = isam2.calculateEstimate<gtsam::Pose2>(observation->key2());
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key2());
                       newVariables.insert(observation->key1(), previousPose * observation->measured().inverse());
                     }
                   }
@@ -260,7 +278,7 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
                       newVariables.insert(observation->key2(), observation->measured());
                     }
                     else{
-                      gtsam::Pose2 previousPose = isam2.calculateEstimate<gtsam::Pose2>(observation->key1());
+                      gtsam::Pose3 previousPose = isam2.calculateEstimate<gtsam::Pose3>(observation->key1());
                       newVariables.insert(observation->key2(), previousPose * observation->measured());
                     }
                   }
@@ -281,7 +299,7 @@ void loadLoop(gtsam::NonlinearFactorGraph &dataset, gtsam::ISAM2 &isam2){
                    std::cout<<"couldnt cast"<<std::endl;
       }
   }
-  
+      //gtsam::Values estimate(isam2.calculateEstimate());
 }
 
 

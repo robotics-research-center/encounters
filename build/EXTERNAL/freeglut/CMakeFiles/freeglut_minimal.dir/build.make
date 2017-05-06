@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair
+CMAKE_SOURCE_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/slam/cair/build
+CMAKE_BINARY_DIR = /home/gunshi/Downloads/MultiRobot/3dmerge/build
 
 # Include any dependencies generated for this target.
 include EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/depend.make
@@ -59,16 +59,16 @@ include EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/flags.make
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/flags.make
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o: ../EXTERNAL/freeglut/freeglut_font.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_font.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_font.cpp
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_font.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_font.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.i
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_font.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_font.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.s
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o.requires:
 
@@ -83,16 +83,16 @@ EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_font.cpp.o.provides.b
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/flags.make
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o: ../EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.i
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_mono_roman.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.s
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp.o.requires:
 
@@ -107,16 +107,16 @@ EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_mono_roman.cpp
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/flags.make
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o: ../EXTERNAL/freeglut/freeglut_stroke_roman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o -c /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_roman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o -c /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_roman.cpp
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.i"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_roman.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.i
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_roman.cpp > CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.i
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.s"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut/freeglut_stroke_roman.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.s
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut/freeglut_stroke_roman.cpp -o CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.s
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o.requires:
 
@@ -143,9 +143,9 @@ freeglut_minimal_EXTERNAL_OBJECTS =
 ../lib/libg2o_ext_freeglut_minimal.a: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/freeglut_stroke_roman.cpp.o
 ../lib/libg2o_ext_freeglut_minimal.a: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/build.make
 ../lib/libg2o_ext_freeglut_minimal.a: EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/slam/cair/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../../lib/libg2o_ext_freeglut_minimal.a"
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -P CMakeFiles/freeglut_minimal.dir/cmake_clean_target.cmake
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/freeglut_minimal.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gunshi/Downloads/MultiRobot/3dmerge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../../lib/libg2o_ext_freeglut_minimal.a"
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -P CMakeFiles/freeglut_minimal.dir/cmake_clean_target.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/freeglut_minimal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/build: ../lib/libg2o_ext_freeglut_minimal.a
@@ -159,10 +159,10 @@ EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/requires: EXTERNAL/freeglut/CM
 .PHONY : EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/requires
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/clean:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -P CMakeFiles/freeglut_minimal.dir/cmake_clean.cmake
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut && $(CMAKE_COMMAND) -P CMakeFiles/freeglut_minimal.dir/cmake_clean.cmake
 .PHONY : EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/clean
 
 EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/depend:
-	cd /home/gunshi/Downloads/MultiRobot/slam/cair/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/slam/cair /home/gunshi/Downloads/MultiRobot/slam/cair/EXTERNAL/freeglut /home/gunshi/Downloads/MultiRobot/slam/cair/build /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut /home/gunshi/Downloads/MultiRobot/slam/cair/build/EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gunshi/Downloads/MultiRobot/3dmerge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gunshi/Downloads/MultiRobot/3dmerge /home/gunshi/Downloads/MultiRobot/3dmerge/EXTERNAL/freeglut /home/gunshi/Downloads/MultiRobot/3dmerge/build /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut /home/gunshi/Downloads/MultiRobot/3dmerge/build/EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : EXTERNAL/freeglut/CMakeFiles/freeglut_minimal.dir/depend
 
