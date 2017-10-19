@@ -1,4 +1,3 @@
-
 #include <string>
 #include <vector>
 
@@ -32,28 +31,43 @@
 extern comm mythread_comm;
 extern writer mywriter;
 extern std::vector<Matrix> Tr_global;
-extern gtsam::Values initial;
-//extern std::ofstream unopt; //needed?
-extern gtsam::Values initialunopt;
-extern gtsam::Pose3 refPose; 
-extern gtsam::Pose3 currentPose; 
-extern int latestkey;
+extern pthread_mutex_t myMutex;
+extern gtsam::NonlinearFactorGraph nfg[2];
+
+
 
 #ifndef _HELPER_FINCTIONS_h
 #define _HELPER_FINCTIONS_h
 
-// extern bool dloop_wait_flag;
-// extern bool viso_wait_flag;
-// extern bool loop_write_done;
-//extern ofstream myfile1;
+
 
 // To find number of images in a directory
 int listdir(char *dir);
 
-// To find Visual Odometry using libviso2
-void my_libviso2(std::string dir, int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg);
 
 // Class to hold relative poses
+
+class ARsync{
+
+public:
+	double thresh=0.3;
+	bool detecting[2]={false};
+	bool hold[2]={false};
+	int framelastseen[2] = {0};
+	int framecurrent[2] = {0};
+	bool comparing[2]={false};
+	double dist[2];
+	bool readyToCompare[2]={false};
+	bool readyToExchange[2]={false};
+	bool exchanged[2]={false};
+	int indexfrom[2];
+	int indextill[2];
+	int edges=0;
+	bool finished[2];
+};
+
+
+extern ARsync arsync;
 
 class Tr_relative
 {
@@ -64,12 +78,14 @@ class Tr_relative
 
 };
 
-// To find relative transformations between loop closing frames
-void my_libviso2_relative(std::vector<Tr_relative> &relative, std::vector<int> index1, std::vector<int> index2, std::string dir);
+void master_AR(int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg_final,std::vector<bool> &detected, std::vector<gtsam::Pose3> &ARpose);
 
-bool my_libviso2_relative(Matrix &Tr_final, int index1, int index2, std::string dir,std::string dir2);
+void compare();
 
-std::string my_for_g2o_edge(int id1, int id2, Matrix transform,gtsam::ISAM2 &isam2,bool relin,gtsam::NonlinearFactorGraph &nfg,std::string prefix);
+void client_AR(int numImg,gtsam::ISAM2 &isam2,gtsam::NonlinearFactorGraph &nfg_final,std::vector<bool> &detected, std::vector<gtsam::Pose3> &ARpose);
+
+void exchange(int nfgindex, gtsam::NonlinearFactorGraph &nfg_own, gtsam::ISAM2 &isam2, int key);
+void remainingadd(int nfgindex, gtsam::NonlinearFactorGraph &nfg_own, gtsam::ISAM2 &isam2, int key);
 
 
 #endif
